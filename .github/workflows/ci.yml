@@ -21,7 +21,9 @@ jobs:
         env:
           ETHERSCAN_API_KEY: ${{ secrets.ETHERSCAN_API_KEY }}
         run: |
-          docker run --rm invcon \
+          docker run --rm \
+            -e ETHERSCAN_API_KEY \
+            invcon \
             invcon --eth_address 0x0e9d46eed51a527db8f5c12a803eb7fddf4da332 \
             | tee output.txt
       - name: Validate output
