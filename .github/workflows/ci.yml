@@ -1,0 +1,36 @@
+name: InvCon CI
+
+on: [push, pull_request]
+
+jobs:
+  L1-docker-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Build Docker image
+        run: docker build -t invcon .
+
+  L2-smoke-test:
+    runs-on: ubuntu-latest
+    needs: L1-docker-build
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Build Docker image
+        run: docker build -t invcon .
+      - name: Run smoke test
+        env:
+          ETHERSCAN_API_KEY: ${{ secrets.ETHERSCAN_API_KEY }}
+        run: |
+          docker run --rm invcon \
+            invcon --eth_address 0x0e9d46eed51a527db8f5c12a803eb7fddf4da332 \
+            | tee output.txt
+      - name: Validate output
+        run: grep -q "finished" output.txt || (echo "FAIL: invcon did not complete" && exit 1)
+
+  L3-hadolint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - uses: hadolint/hadolint-action@54c9adbab1582c2ef04b2016b760714a4bfde3cf
+        with:
+          dockerfile: Dockerfile
