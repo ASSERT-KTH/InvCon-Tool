@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /app
 COPY . .
 
-RUN pip3 install --no-cache-dir slither-analyzer
+RUN pip3 install --no-cache-dir slither-analyzer PySocks
 RUN pip3 install --no-cache-dir -e .
 
 ENV DAIKONDIR=/app/daikon-5.8.6
