@@ -23,6 +23,12 @@ jobs:
         run: |
           docker run --rm \
             -e ETHERSCAN_API_KEY \
+            -e HTTP_PROXY="" \
+            -e HTTPS_PROXY="" \
+            -e http_proxy="" \
+            -e https_proxy="" \
+            -e ALL_PROXY="" \
+            -e all_proxy="" \
             invcon \
             --eth_address 0x0e9d46eed51a527db8f5c12a803eb7fddf4da332 \
             | tee output.txt
