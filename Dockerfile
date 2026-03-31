@@ -13,14 +13,7 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /app
 COPY . .
 
-RUN python3 -c "
-import pathlib
-p = pathlib.Path('invcon/crawler/crawler.py')
-src = p.read_text()
-src = src.replace('scraper.proxies = {\"http\": \"socks5://127.0.0.1:20170\", \"https\": \"socks5://127.0.0.1:20170\",\n    \"socks5\": \"socks5://127.0.0.1:20170\"}', 'scraper.proxies = {}')
-p.write_text(src)
-print('patched:', 'scraper.proxies = {}' in src)
-"
+RUN sed -i 's|scraper\.proxies = .*|scraper.proxies = {}|' invcon/crawler/crawler.py
 
 RUN pip3 install --no-cache-dir slither-analyzer PySocks
 RUN pip3 install --no-cache-dir -e .
