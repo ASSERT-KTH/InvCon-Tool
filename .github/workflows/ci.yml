@@ -27,8 +27,8 @@ jobs:
             invcon --eth_address 0x0e9d46eed51a527db8f5c12a803eb7fddf4da332 \
             | tee output.txt
       - name: Validate output
-        run: grep -q "finished" output.txt || (echo "FAIL: invcon did not complete" && exit 1)
-
+        run: grep -q "finished" output.txt || { echo "FAIL: invcon did not complete"; exit 1; }
+        
   L3-hadolint:
     runs-on: ubuntu-latest
     steps:
