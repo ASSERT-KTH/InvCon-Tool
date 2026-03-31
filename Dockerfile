@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /app
 COPY . .
 
-RUN sed -i 's|scraper\.proxies = .*|scraper.proxies = {}|' invcon/crawler/crawler.py
+RUN sed -i '/scraper\.proxies = {/,/}/c\scraper.proxies = {}' invcon/crawler/crawler.py
 
 RUN pip3 install --no-cache-dir slither-analyzer PySocks
 RUN pip3 install --no-cache-dir -e .
