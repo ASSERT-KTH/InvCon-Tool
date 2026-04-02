@@ -281,7 +281,7 @@ APIKEY_BLOCKCHAIN_BSC = "A4YZESUAIA4IGXSBK8D4NYQMUBMWTVAXN9"
 WEBPAGE_FUNC_BLOCKCAHIN_ETH = getETHHtmlBody
 WEBPAGE_FUNC_BLOCKCHAIN_BSC = getBSCHtmlBody
 
-APIENDPOINT_BLOCKCHAIN_ETH = "https://api.etherscan.io/v2/api"
+APIENDPOINT_BLOCKCHAIN_ETH = "https://api.etherscan.io/v2/api?chainid=1"
 APIENDPOINT_BLOCKCHAIN_BSC = "https://api.bscscan.com/api"
 
 SOURCECODE_API_BLOCKCHAIN_ETH = "module=contract&action=getsourcecode&address={0}&apikey={1}"
@@ -334,7 +334,7 @@ class Crawler:
           
 
     def getSourceCode(self):
-        url = self.apiendpoint+"?"+self.source_api.format(self.address, self.api_key)
+        url = self.apiendpoint+"&"+self.source_api.format(self.address, self.api_key)
         sourcecode = getAPIData(url)
         # There is some case that a lot of source code files are provided
         # TODO 
@@ -350,7 +350,7 @@ class Crawler:
         return contractName, compilerVersion, constructorArguments, f"{self.addressdir}/{self.address}.sol"
 
     def getABI(self):
-        url = self.apiendpoint+"?"+self.abi_api.format(self.address, self.api_key)
+        url = self.apiendpoint+"&"+self.abi_api.format(self.address, self.api_key)
         abi = getAPIData(url)
         assert isinstance(abi, str), "Error in abi; either network error or abi is unavailable!"
         with open(f"{self.addressdir}/{self.address}.abi", "w") as f:
@@ -363,7 +363,7 @@ class Crawler:
         for transaction in transactionsByBigQuery:
             txhash = transaction["hash"]
             external = transaction["external"]
-            url = self.apiendpoint+"?"+self.tx_api.format(txhash, self.api_key)
+            url = self.apiendpoint+"&"+self.tx_api.format(txhash, self.api_key)
             transaction = getAPIData(url)
             transaction["isExternalContractCall"] = external
             all_transactions.append(transaction)
@@ -390,7 +390,7 @@ class Crawler:
         if transactionNo > LIMIT:
             transactionNo = LIMIT
         startblock = 0
-        url = self.apiendpoint+"?"+self.txs_api.format(self.address, startblock, self.api_key)
+        url = self.apiendpoint+"&"+self.txs_api.format(self.address, startblock, self.api_key)
         transactions = []
         cnt = 0
         while cnt < math.ceil(transactionNo/10000):
@@ -403,7 +403,7 @@ class Crawler:
                     tx_hash = transaction["hash"]
                     if all_transaction_hashes is not None and tx_hash.strip().lower() in all_transaction_hashes:
                         all_transaction_hashes.remove(tx_hash.strip().lower())
-                url = self.apiendpoint+"?"+self.txs_api.format(self.address, startblock, self.api_key)
+                url = self.apiendpoint+"&"+self.txs_api.format(self.address, startblock, self.api_key)
             else:
                 break
         transactions[0]["input"]=arguments
