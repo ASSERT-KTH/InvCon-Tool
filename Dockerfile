@@ -7,8 +7,10 @@ ENV PYTHONUNBUFFERED=1
 RUN apt-get update && apt-get install -y \
     python3 python3-pip python3-dev \
     default-jdk \
-    git curl \
+    git curl nodejs npm \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
+
+RUN cd /app/invcon/nodejs && npm install
 
 WORKDIR /app
 COPY . .
