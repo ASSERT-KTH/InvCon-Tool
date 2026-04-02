@@ -22,5 +22,7 @@
         "solc-0.6.1": "npm:solc@^0.6.1",
         "solc-0.6.2": "npm:solc@^0.6.2",
         "web3-eth-abi": "^1.5.2"
-    }
+    },
+    "name": "invcon-nodejs",
+    "version": "1.0.0"
 }
