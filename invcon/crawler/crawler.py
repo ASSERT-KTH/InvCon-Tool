@@ -449,7 +449,7 @@ class Crawler:
             results["transactions_file"] = txs 
             
             # decode txs
-            nodejs_dir ="/home/liuye/Projects/InvCon/invcon/nodejs"
+            nodejs_dir = "/app/invcon/nodejs"
             tx_decode_file = os.path.join(os.path.dirname(results["transactions_file"]), "tx_decode.json")
             cmd = f'cd {nodejs_dir} && node decodeTx.js --abi {results["abi_file"]} --tx {results["transactions_file"]} --output {tx_decode_file}'
             os.system(cmd)
