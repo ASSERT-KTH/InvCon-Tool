@@ -338,7 +338,6 @@ class Crawler:
         sourcecode = getAPIData(url)
         # There is some case that a lot of source code files are provided
         # TODO 
-        print("DEBUG:", repr(sourcecode[:200]))
         contractName = sourcecode[0]["ContractName"]
         compilerVersion = sourcecode[0]["CompilerVersion"]
         constructorArguments = sourcecode[0]["ConstructorArguments"]
@@ -395,10 +394,7 @@ class Crawler:
         cnt = 0
         while cnt < math.ceil(transactionNo/10000):
             ttransactions = getAPIData(url)
-            print("DEBUG txs:", type(ttransactions), repr(ttransactions[:200]) if isinstance(ttransactions, str) else ttransactions[:1])
-        print("DEBUG txs:", type(ttransactions), repr(ttransactions[:200]) if isinstance(ttransactions, str) else ttransactions[:1])
-        print("DEBUG txs:", type(ttransactions), repr(ttransactions[:200]) if isinstance(ttransactions, str) else ttransactions[:1])
-        if len(ttransactions) >0:
+            if len(ttransactions) >0:
                 startblock = str(int(ttransactions[-1]["blockNumber"])+1)
                 cnt = cnt+1
                 transactions.extend(ttransactions)
