@@ -338,6 +338,7 @@ class Crawler:
         sourcecode = getAPIData(url)
         # There is some case that a lot of source code files are provided
         # TODO 
+        print("DEBUG:", repr(sourcecode[:200]))
         contractName = sourcecode[0]["ContractName"]
         compilerVersion = sourcecode[0]["CompilerVersion"]
         constructorArguments = sourcecode[0]["ConstructorArguments"]
