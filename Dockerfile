@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /app
 COPY . .
 
-RUN sed -i '/scraper\.proxies = {/,/}/c\scraper.proxies = {}' invcon/crawler/crawler.py
+RUN sed -i 's/APIKEY_BLOCKCHAIN_ETH = ".*"/APIKEY_BLOCKCHAIN_ETH = os.environ.get("ETHERSCAN_API_KEY", "")/' invcon/crawler/crawler.py
 
 RUN pip3 install --no-cache-dir slither-analyzer PySocks
 RUN pip3 install --no-cache-dir -e .
