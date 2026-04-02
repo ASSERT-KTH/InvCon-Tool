@@ -1264,8 +1264,8 @@ class Contract(ContractStorageMonitor):
 
         super().__init__(typeJson=types, storageJson = storage)
 
-        self.tx_abi = json.load(open(input_abi),encoding="utf8") 
-        self.tx_receipts = json.load(open(input_tx_receipt), encoding="utf8")
+        self.tx_abi = json.load(open(input_abi, encoding="utf8")) 
+        self.tx_receipts = json.load(open(input_tx_receipt, encoding="utf8"))
         if "result" in self.tx_receipts:
                 self.tx_receipts = self.tx_receipts["result"]
         
