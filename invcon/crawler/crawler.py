@@ -15,8 +15,7 @@ from invcon.parsing.storageLayout import main_impl as generateStorageLayout
 import shutil
 
 scraper = cloudscraper.create_scraper(browser='chrome') # returns a CloudScraper instance
-scraper.proxies = {"http": "socks5://127.0.0.1:20170", "https": "socks5://127.0.0.1:20170",
-    "socks5": "socks5://127.0.0.1:20170"}
+scraper.proxies = {}
 INTERNAL_TRANSACTION="internal_transactions"
 
 TransactionThreshold = 50
