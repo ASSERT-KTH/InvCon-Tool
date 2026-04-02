@@ -397,6 +397,7 @@ class Crawler:
             ttransactions = getAPIData(url)
             print("DEBUG txs:", type(ttransactions), repr(ttransactions[:200]) if isinstance(ttransactions, str) else ttransactions[:1])
         print("DEBUG txs:", type(ttransactions), repr(ttransactions[:200]) if isinstance(ttransactions, str) else ttransactions[:1])
+        print("DEBUG txs:", type(ttransactions), repr(ttransactions[:200]) if isinstance(ttransactions, str) else ttransactions[:1])
         if len(ttransactions) >0:
                 startblock = str(int(ttransactions[-1]["blockNumber"])+1)
                 cnt = cnt+1
