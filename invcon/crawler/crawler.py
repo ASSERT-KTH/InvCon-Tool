@@ -394,6 +394,7 @@ class Crawler:
         cnt = 0
         while cnt < math.ceil(transactionNo/10000):
             ttransactions = getAPIData(url)
+            if isinstance(ttransactions, str): ttransactions = []
             if len(ttransactions) >0:
                 startblock = str(int(ttransactions[-1]["blockNumber"])+1)
                 cnt = cnt+1
