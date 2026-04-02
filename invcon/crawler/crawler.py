@@ -281,7 +281,7 @@ APIKEY_BLOCKCHAIN_BSC = "A4YZESUAIA4IGXSBK8D4NYQMUBMWTVAXN9"
 WEBPAGE_FUNC_BLOCKCAHIN_ETH = getETHHtmlBody
 WEBPAGE_FUNC_BLOCKCHAIN_BSC = getBSCHtmlBody
 
-APIENDPOINT_BLOCKCHAIN_ETH = "https://api.etherscan.io/api"
+APIENDPOINT_BLOCKCHAIN_ETH = "https://api.etherscan.io/v2/api"
 APIENDPOINT_BLOCKCHAIN_BSC = "https://api.bscscan.com/api"
 
 SOURCECODE_API_BLOCKCHAIN_ETH = "module=contract&action=getsourcecode&address={0}&apikey={1}"
