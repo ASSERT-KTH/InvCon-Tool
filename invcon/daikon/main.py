@@ -12,7 +12,7 @@ def main(address, workdir, contractName, storageLayoutJson, input_abi, input_sta
     contract =Contract.Contract(workdir, contractName, storageLayoutJson, input_abi,  input_state_change, input_tx_receipt)
 
     # generate daikon declarations
-    g_decls = daikon.getDecl(contractName, contract, contractAbi=json.load(open(input_abi),encoding="utf8") )
+    g_decls = daikon.getDecl(contractName, contract, contractAbi=json.load(open(input_abi,encoding="utf8") )
     
     with open(decls_file, "w") as f:
         f.write("\n".join(g_decls))
