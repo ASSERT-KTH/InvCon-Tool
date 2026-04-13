@@ -27,10 +27,10 @@ jobs:
       - name: Debug Daikon
         run: |
           docker run --rm --entrypoint bash invcon -c "
-            echo DAIKONDIR=\$DAIKONDIR &&
-            ls \$DAIKONDIR &&
-            find /app/daikon-5.8.6 -name 'daikon.jar' &&
-            cat \$DAIKONDIR/scripts/daikon
+            ls /app/daikon-5.8.6/scripts/ &&
+            echo '---' &&
+            cat /app/daikon-5.8.6/scripts/daikon.py || true &&
+            cat /app/daikon-5.8.6/scripts/rundalkon.sh || true
           "
            
       - name: Run smoke test
