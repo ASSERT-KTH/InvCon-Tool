@@ -24,12 +24,13 @@ jobs:
         run: |
           echo "Key length: ${#ETHERSCAN_API_KEY}"
 
-      - name: Debug Daikon      
+      - name: Debug Daikon
         run: |
           docker run --rm --entrypoint bash invcon -c "
             echo DAIKONDIR=\$DAIKONDIR &&
             ls \$DAIKONDIR &&
-            find /app/daikon-5.8.6 -name '*.jar' | head -20
+            find /app/daikon-5.8.6 -name 'daikon.jar' &&
+            cat \$DAIKONDIR/scripts/daikon
           "
            
       - name: Run smoke test
