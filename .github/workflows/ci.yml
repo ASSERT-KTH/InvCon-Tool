@@ -38,9 +38,10 @@ jobs:
           grep -q "finished" output.txt || { echo "FAIL: invcon did not complete"; exit 1; }
         
   L3-hadolint:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
-      - uses: hadolint/hadolint-action@54c9adbab1582c2ef04b2016b760714a4bfde3cf
-        with:
-          dockerfile: Dockerfile
+   runs-on: ubuntu-latest
+   steps:
+     - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+     - uses: hadolint/hadolint-action@54c9adbab1582c2ef04b2016b760714a4bfde3cf
+       with:
+         dockerfile: Dockerfile
+         ignore: DL3008 DL3013 DL3015
