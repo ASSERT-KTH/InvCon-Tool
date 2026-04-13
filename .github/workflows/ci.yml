@@ -37,7 +37,7 @@ jobs:
         run: |
           grep -q "finished" output.txt || { echo "FAIL: invcon did not complete"; exit 1; }
           
- L3-hadolint:
+  L3-hadolint:
    runs-on: ubuntu-latest
    steps:
      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
