@@ -14,6 +14,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 WORKDIR /app
 COPY . .
 
+RUN wget -q -O /app/daikon-5.8.6/daikon.jar \
+    https://plse.cs.washington.edu/daikon/download/daikon.jar
+
 WORKDIR /app/invcon/nodejs
 RUN npm install
 
