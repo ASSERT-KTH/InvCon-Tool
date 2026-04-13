@@ -23,13 +23,7 @@ jobs:
           ETHERSCAN_API_KEY: ${{ secrets.ETHERSCAN_API_KEY }}
         run: |
           echo "Key length: ${#ETHERSCAN_API_KEY}"
-          
-      - name: Check versions        # <-- add this temporarily
-        run: |
-         docker run --rm invcon pip3 show slither-analyzer
-         docker run --rm --entrypoint node invcon --version
-        
-          
+           
       - name: Run smoke test
         env:
           ETHERSCAN_API_KEY: ${{ secrets.ETHERSCAN_API_KEY }}
