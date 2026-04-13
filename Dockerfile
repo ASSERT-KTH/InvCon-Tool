@@ -15,10 +15,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 WORKDIR /app
 COPY . .
 
-RUN cd /app/daikon-5.8.6 && \
-    export DAIKONDIR=$(pwd) && \
+RUN bash -c "cd /app/daikon-5.8.6 && \
+    export DAIKONDIR=\$(pwd) && \
     source scripts/daikon.bashrc && \
-    make rebuild-everything
+    make rebuild-everything"
 
 WORKDIR /app/invcon/nodejs
 RUN npm install
