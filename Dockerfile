@@ -14,8 +14,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 WORKDIR /app
 COPY . .
 
-RUN cd /app/invcon/nodejs && npm install \
-    && pip3 install --no-cache-dir \
+WORKDIR /app/invcon/nodejs
+RUN npm install
+
+WORKDIR /app
+RUN pip3 install --no-cache-dir \
         slither-analyzer==0.10.0 \
         PySocks==1.7.1 \
         lxml==4.9.3 \
