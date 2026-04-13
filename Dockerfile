@@ -15,8 +15,10 @@ WORKDIR /app
 
 COPY . .
 
-RUN npm install --prefix /app/invcon/nodejs \
-    && pip3 install --no-cache-dir slither-analyzer PySocks lxml \
+RUN pip3 install --no-cache-dir \
+    slither-analyzer==0.10.0 \
+    PySocks==1.7.1 \
+    lxml==4.9.3 \
     && pip3 install --no-cache-dir -e .
 
 ENV DAIKONDIR=/app/daikon-5.8.6
