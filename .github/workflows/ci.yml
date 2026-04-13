@@ -42,10 +42,7 @@ jobs:
             --eth_address 0x0e9d46eed51a527db8f5c12a803eb7fddf4da332 \
             --workspace /app/tmp \
             | tee output.txt || true
-
-      - name: Print invariants
-        run: cat /tmp/invcon-out/0x0e9d46eed51a527db8f5c12a803eb7fddf4da332/TokenERC20.inv
-        
+  
       - name: Validate output
         run: |
           grep -q "finished" output.txt || { echo "FAIL: invcon did not complete"; exit 1; }
