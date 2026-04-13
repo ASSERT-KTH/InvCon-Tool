@@ -7,24 +7,27 @@ ENV DEBIAN_FRONTEND=noninteractive \
 RUN apt-get update && apt-get install -y --no-install-recommends \
     python3 python3-pip python3-dev \
     default-jdk \
-    git curl nodejs npm \
+    git curl make \
+    nodejs npm \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 COPY . .
 
-RUN curl -sSL -o /app/daikon-5.8.6/daikon.jar \
-    https://plse.cs.washington.edu/daikon/download/daikon.jar
+RUN cd /app/daikon-5.8.6 && \
+    export DAIKONDIR=$(pwd) && \
+    source scripts/daikon.bashrc && \
+    make rebuild-everything
 
 WORKDIR /app/invcon/nodejs
 RUN npm install
 
 WORKDIR /app
 RUN pip3 install --no-cache-dir \
-        slither-analyzer==0.10.0 \
-        PySocks==1.7.1 \
-        lxml==4.9.3 \
+        slither-analyzer \
+        PySocks \
+        lxml \
     && pip3 install --no-cache-dir -e .
 
 ENV DAIKONDIR=/app/daikon-5.8.6
