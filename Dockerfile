@@ -11,16 +11,14 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /app/invcon/nodejs
-RUN npm install
 WORKDIR /app
-
 COPY . .
 
-RUN pip3 install --no-cache-dir \
-    slither-analyzer==0.10.0 \
-    PySocks==1.7.1 \
-    lxml==4.9.3 \
+RUN cd /app/invcon/nodejs && npm install \
+    && pip3 install --no-cache-dir \
+        slither-analyzer==0.10.0 \
+        PySocks==1.7.1 \
+        lxml==4.9.3 \
     && pip3 install --no-cache-dir -e .
 
 ENV DAIKONDIR=/app/daikon-5.8.6
