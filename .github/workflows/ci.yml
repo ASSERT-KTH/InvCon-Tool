@@ -27,9 +27,9 @@ jobs:
       - name: Debug Daikon
         run: |
           docker run --rm --entrypoint bash invcon -c "
-            grep -rn 'daikon.Daikon\|java.*daikon\|CLASSPATH\|daikon.jar\|subprocess\|os.system\|os.popen' /app/invcon/daikon/Contract.py
+            grep -n 'inferLikely\|daikon\|java\|os\.\|subprocess\|Popen\|run\|call' /app/invcon/daikon/Daikon.py | head -40
           "
-           
+          
       - name: Run smoke test
         env:
           ETHERSCAN_API_KEY: ${{ secrets.ETHERSCAN_API_KEY }}
