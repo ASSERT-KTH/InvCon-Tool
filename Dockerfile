@@ -13,9 +13,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends\
 WORKDIR /app
 COPY . .
 
-RUN curl -L -O http://plse.cs.washington.edu/daikon/download/daikon-5.8.6.tar.gz \
-    && tar -xzf daikon-5.8.6.tar.gz \
-    && rm daikon-5.8.6.tar.gz
+RUN curl -L -o daikon.tar.gz http://plse.cs.washington.edu/daikon/download/daikon-5.8.22.tar.gz \
+    && tar -xzf daikon.tar.gz \
+    && rm daikon.tar.gz \
+    && mv daikon-5.8.22 daikon
     
 WORKDIR /app/invcon/nodejs
 RUN npm install
