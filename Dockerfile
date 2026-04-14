@@ -16,6 +16,7 @@ COPY . .
 WORKDIR /app/invcon/nodejs
 RUN npm install
 
+WORKDIR /app
 RUN pip3 install --no-cache-dir \
         slither-analyzer==0.10.0 \
         PySocks==1.7.1 \
