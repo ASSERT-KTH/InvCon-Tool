@@ -25,6 +25,7 @@ RUN pip3 install --no-cache-dir \
 
 ENV DAIKONDIR=/app/daikon-5.8.6
 ENV PATH="${DAIKONDIR}/scripts:${PATH}"
+ENV CLASSPATH="${DAIKONDIR}/daikon.jar"
 
 ENTRYPOINT ["invcon"]
 CMD ["--help"]
