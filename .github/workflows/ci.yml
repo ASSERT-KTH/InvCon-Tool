@@ -33,11 +33,7 @@ jobs:
           docker run --rm --entrypoint bash invcon -c "
             java -version 2>&1 &&
             java -cp /app/daikon-5.8.6/daikon.jar daikon.Daikon --help 2>&1 | head -10
-          "
-          
-      - name: Print invariants
-        run: |
-          cat /tmp/invcon-out/0x0e9d46eed51a527db8f5c12a803eb7fddf4da332/TokenERC20.inv  
+          "  
           
       - name: Run smoke test
         env:
@@ -51,6 +47,10 @@ jobs:
             --eth_address 0x0e9d46eed51a527db8f5c12a803eb7fddf4da332 \
             --workspace /home/realworldcontracts/ \
             | tee output.txt || true
+            
+      - name: Print invariants
+        run: |
+          cat /tmp/invcon-out/0x0e9d46eed51a527db8f5c12a803eb7fddf4da332/TokenERC20.inv
             
       - name: Validate output
         run: |
