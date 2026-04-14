@@ -4,7 +4,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
     PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1
 
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install -y --no-install-recommends\
     python3 python3-pip python3-dev \
     default-jdk \
     git curl \
@@ -13,7 +13,6 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /app
 COPY . .
 
-RUN npm install
 RUN pip3 install --no-cache-dir \
         slither-analyzer==0.10.0 \
         PySocks==1.7.1 \
