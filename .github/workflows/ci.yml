@@ -23,18 +23,20 @@ jobs:
           ETHERSCAN_API_KEY: ${{ secrets.ETHERSCAN_API_KEY }}
         run: |
           echo "Key length: ${#ETHERSCAN_API_KEY}"
-           
-      - name: Run advanced test with volume mount
+          
+      - name: Debug Daikon build
+        run: |
+          docker run --rm --entrypoint bash invcon -c "
+            find /app/daikon-5.8.6 -name 'daikon.jar' &&
+            ls -la /app/daikon-5.8.6/daikon.jar 2>/dev/null || echo 'daikon.jar NOT FOUND'
+          "
+          
+      - name: Run smoke test
         env:
           ETHERSCAN_API_KEY: ${{ secrets.ETHERSCAN_API_KEY }}
         run: |
-          # 1. Create a directory on the GitHub Actions host runner to catch the data
-          mkdir -p ${{ github.workspace }}/invcon_output
-          
-          # 2. Run Docker with the -v flag mapping the host dir to the container's output dir
           docker run --rm \
             -e ETHERSCAN_API_KEY \
-            -v ${{ github.workspace }}/invcon_output:/app/tmp \
             invcon \
             --eth_address 0x0e9d46eed51a527db8f5c12a803eb7fddf4da332 \
             | tee output.txt || true
