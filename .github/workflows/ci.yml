@@ -35,14 +35,21 @@ jobs:
             java -cp /app/daikon-5.8.6/daikon.jar daikon.Daikon --help 2>&1 | head -10
           "
           
+      - name: Print invariants
+        run: |
+          cat /tmp/invcon-out/0x0e9d46eed51a527db8f5c12a803eb7fddf4da332/TokenERC20.inv  
+          
       - name: Run smoke test
         env:
           ETHERSCAN_API_KEY: ${{ secrets.ETHERSCAN_API_KEY }}
         run: |
+          mkdir -p /tmp/invcon-out
           docker run --rm \
             -e ETHERSCAN_API_KEY \
+            -v /tmp/invcon-out:/home/realworldcontracts/ \
             invcon \
             --eth_address 0x0e9d46eed51a527db8f5c12a803eb7fddf4da332 \
+            --workspace /home/realworldcontracts/ \
             | tee output.txt || true
             
       - name: Validate output
