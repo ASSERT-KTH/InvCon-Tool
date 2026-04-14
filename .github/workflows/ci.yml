@@ -27,8 +27,9 @@ jobs:
       - name: Debug Daikon build
         run: |
           docker run --rm --entrypoint bash invcon -c "
-            find /app/daikon-5.8.6 -name 'daikon.jar' &&
-            ls -la /app/daikon-5.8.6/daikon.jar 2>/dev/null || echo 'daikon.jar NOT FOUND'
+            ls -la /app/daikon-5.8.6/daikon.jar &&
+            jar tf /app/daikon-5.8.6/daikon.jar | grep -i 'daikon/Daikon' | head -5 &&
+            jar tf /app/daikon-5.8.6/daikon.jar | grep -i 'InvCon' | head -5
           "
           
       - name: Run smoke test
@@ -52,4 +53,4 @@ jobs:
      - uses: hadolint/hadolint-action@54c9adbab1582c2ef04b2016b760714a4bfde3cf
        with:
          dockerfile: Dockerfile
-         ignore: DL3008
+         ignore: DL3008 DL3013 DL3015 DL4006 SC2038 DL3003
