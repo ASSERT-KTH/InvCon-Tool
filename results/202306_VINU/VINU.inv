@@ -1,0 +1,150 @@
+Daikon version 5.8.6, released December 2, 2020; http://plse.cs.washington.edu/daikon.
+Reading declaration files Processing trace data; reading 1 dtrace file:
+Warning: Daikon is using a dataflow hierarchy analysis on a data trace that does not appear to be over a program execution, consider running Daikon with the --nohierarchy flag.
+
+===========================================================================
+VINU.addLiquidityETH(address,address,address):::EXIT2
+this == orig(this)
+this.Ownable_own__owner == orig(this.Ownable_own__owner)
+this._balances == orig(this._balances)
+this._allowances == orig(this._allowances)
+this._allowances[].getSubLength() == orig(this._allowances[].getSubLength())
+this._totalSupply == orig(this._totalSupply)
+this._totalSupply == orig(this._allowances[post(pair(routeraddr,lpraddr))].getSubValue())
+routeraddr == orig(routeraddr)
+lpraddr == orig(lpraddr)
+devaddr == orig(devaddr)
+msg.sender == orig(lpraddr)
+orig(this._totalSupply) == orig(this._allowances[post(pair(routeraddr,lpraddr))].getSubValue())
+orig(lpraddr) == orig(msg.sender)
+sum(this._allowances[].getSubLength()) == sum(orig(this._allowances[].getSubLength()))
+this._balances has only one value
+this._allowances has only one value
+this._totalSupply == 0
+orig(this) has only one value
+orig(this._totalSupply) == 0
+orig(msg.value) == 2000000000000000000
+orig(block.timestamp) == 1686048743
+sum(this._allowances[].getSubLength()) == 0
+orig(this._allowances[post(pair(routeraddr,lpraddr))].getSubValue()) == 0
+===========================================================================
+VINU.approve(address,uint256):::EXIT2
+this == orig(this)
+this.Ownable_own__owner == orig(this.Ownable_own__owner)
+this._balances == orig(this._balances)
+this._allowances == orig(this._allowances)
+this._allowances[].getSubLength() == orig(this._allowances[].getSubLength())
+this._totalSupply == msg.value
+this._totalSupply == orig(this._totalSupply)
+this._totalSupply == orig(msg.value)
+this._totalSupply == sum(this._balances[].getValue())
+this._totalSupply == orig(this._allowances[post(pair(spender,msg.sender))].getSubValue())
+spender == orig(spender)
+amount == orig(amount)
+msg.sender == orig(msg.sender)
+msg.value == orig(this._totalSupply)
+msg.value == orig(msg.value)
+msg.value == sum(this._balances[].getValue())
+msg.value == orig(this._allowances[post(pair(spender,msg.sender))].getSubValue())
+block.timestamp == orig(block.timestamp)
+orig(this._totalSupply) == orig(msg.value)
+orig(this._totalSupply) == sum(this._balances[].getValue())
+orig(this._totalSupply) == orig(this._allowances[post(pair(spender,msg.sender))].getSubValue())
+orig(msg.value) == sum(this._balances[].getValue())
+orig(msg.value) == orig(this._allowances[post(pair(spender,msg.sender))].getSubValue())
+sum(this._balances[].getValue()) == orig(this._allowances[post(pair(spender,msg.sender))].getSubValue())
+sum(this._allowances[].getSubLength()) == sum(orig(this._allowances[].getSubLength()))
+this._balances has only one value
+this._allowances has only one value
+this._totalSupply == 0
+amount == 115792089237316195423570985008687907853269984665640564039457584007913129639935
+msg.value == 0
+orig(this) has only one value
+orig(this._totalSupply) == 0
+orig(amount) == 115792089237316195423570985008687907853269984665640564039457584007913129639935
+orig(msg.value) == 0
+sum(this._balances[].getValue()) == 0
+sum(this._allowances[].getSubLength()) == 0
+orig(this._allowances[post(pair(spender,msg.sender))].getSubValue()) == 0
+this.Ownable_own__owner != orig(spender)
+this.Ownable_own__owner != orig(msg.sender)
+this._totalSupply < amount
+this._totalSupply < block.timestamp
+this._totalSupply < orig(amount)
+this._totalSupply < orig(block.timestamp)
+msg.value < block.timestamp
+msg.value < orig(amount)
+msg.value < orig(block.timestamp)
+block.timestamp < orig(amount)
+orig(this._totalSupply) < orig(amount)
+orig(this._totalSupply) < orig(block.timestamp)
+orig(spender) != orig(msg.sender)
+orig(msg.value) < orig(block.timestamp)
+===========================================================================
+VINU.renounceOwnership():::EXIT2
+this == orig(this)
+this.Ownable_own__owner == orig(this.Ownable_own__owner)
+this._balances == orig(this._balances)
+this._allowances == orig(this._allowances)
+this._allowances[].getSubLength() == orig(this._allowances[].getSubLength())
+this._totalSupply == orig(msg.value)
+msg.sender == orig(msg.sender)
+sum(this._allowances[].getSubLength()) == sum(orig(this._allowances[].getSubLength()))
+this._balances has only one value
+this._allowances has only one value
+this._totalSupply == 0
+orig(this) has only one value
+orig(msg.value) == 0
+orig(block.timestamp) == 1686048851
+sum(this._allowances[].getSubLength()) == 0
+===========================================================================
+VINU.transfer(address,uint256):::EXIT2
+this == orig(this)
+this.Ownable_own__owner == orig(this.Ownable_own__owner)
+this._balances == orig(this._balances)
+this._allowances == orig(this._allowances)
+this._allowances[].getSubLength() == orig(this._allowances[].getSubLength())
+this._totalSupply == msg.value
+this._totalSupply == orig(this._totalSupply)
+this._totalSupply == orig(msg.value)
+this._totalSupply == sum(this._balances[].getValue())
+this._totalSupply == orig(this._allowances[post(pair(recipient,msg.sender))].getSubValue())
+recipient == orig(recipient)
+amount == orig(amount)
+msg.sender == orig(msg.sender)
+msg.value == orig(this._totalSupply)
+msg.value == orig(msg.value)
+msg.value == sum(this._balances[].getValue())
+msg.value == orig(this._allowances[post(pair(recipient,msg.sender))].getSubValue())
+block.timestamp == orig(block.timestamp)
+orig(this._totalSupply) == orig(msg.value)
+orig(this._totalSupply) == sum(this._balances[].getValue())
+orig(this._totalSupply) == orig(this._allowances[post(pair(recipient,msg.sender))].getSubValue())
+orig(msg.value) == sum(this._balances[].getValue())
+orig(msg.value) == orig(this._allowances[post(pair(recipient,msg.sender))].getSubValue())
+sum(this._balances[].getValue()) == orig(this._allowances[post(pair(recipient,msg.sender))].getSubValue())
+sum(this._allowances[].getSubLength()) == sum(orig(this._allowances[].getSubLength()))
+this._balances has only one value
+this._allowances has only one value
+this._totalSupply == 0
+msg.value == 0
+orig(this) has only one value
+orig(this._totalSupply) == 0
+orig(msg.value) == 0
+sum(this._balances[].getValue()) == 0
+sum(this._allowances[].getSubLength()) == 0
+orig(this._allowances[post(pair(recipient,msg.sender))].getSubValue()) == 0
+this.Ownable_own__owner != orig(recipient)
+this.Ownable_own__owner != orig(msg.sender)
+this._totalSupply < amount
+this._totalSupply < block.timestamp
+this._totalSupply < orig(amount)
+this._totalSupply < orig(block.timestamp)
+msg.value < block.timestamp
+msg.value < orig(amount)
+msg.value < orig(block.timestamp)
+block.timestamp < orig(amount)
+orig(this._totalSupply) < orig(amount)
+orig(this._totalSupply) < orig(block.timestamp)
+orig(msg.value) < orig(block.timestamp)
+Exiting Daikon.
