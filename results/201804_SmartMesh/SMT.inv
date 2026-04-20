@@ -1,0 +1,269 @@
+Daikon version 5.8.6, released December 2, 2020; http://plse.cs.washington.edu/daikon.
+Reading declaration files Processing trace data; reading 1 dtrace file:
+Warning: Daikon is using a dataflow hierarchy analysis on a data trace that does not appear to be over a program execution, consider running Daikon with the --nohierarchy flag.
+
+===========================================================================
+SMT.addLock(address):::EXIT2
+this == orig(this)
+this.Token_own_totalSupply == this.decimals
+this.Token_own_totalSupply == orig(this.StandardToken_own_allowed[post(pair(_addr,msg.sender))].getSubValue())
+this.Owned_own_owner == this.Owned_own_newOwner
+this.Owned_own_owner == orig(this.Owned_own_owner)
+this.Owned_own_owner == orig(this.Owned_own_newOwner)
+this.Controlled_own_transferEnabled == this.Controlled_own_lockFlag
+this.Controlled_own_transferEnabled == orig(this.Controlled_own_transferEnabled)
+this.Controlled_own_transferEnabled == orig(this.Controlled_own_lockFlag)
+this.Controlled_own_locked == orig(this.Controlled_own_locked)
+this.Controlled_own_locked[].getValue() == this.Controlled_own_exclude[].getValue()
+this.Controlled_own_locked[].getValue() == orig(this.Controlled_own_locked[].getValue())
+this.Controlled_own_locked[].getValue() == orig(this.Controlled_own_exclude[].getValue())
+this.Controlled_own_exclude == orig(this.Controlled_own_exclude)
+this.StandardToken_own_balances == orig(this.StandardToken_own_balances)
+this.StandardToken_own_allowed == orig(this.StandardToken_own_allowed)
+this.StandardToken_own_allowed[].getSubLength() == orig(this.StandardToken_own_allowed[].getSubLength())
+this.decimals == orig(this.StandardToken_own_allowed[post(pair(_addr,msg.sender))].getSubValue())
+this.nonces == orig(this.nonces)
+_addr == orig(_addr)
+msg.sender == orig(msg.sender)
+sum(this.StandardToken_own_allowed[].getSubLength()) == sum(orig(this.StandardToken_own_allowed[].getSubLength()))
+this.Token_own_totalSupply == 0
+this.Controlled_own_transferEnabled == false
+this.Controlled_own_locked has only one value
+this.Controlled_own_exclude has only one value
+this.StandardToken_own_balances has only one value
+this.StandardToken_own_allowed has only one value
+this.decimals == 0
+this.nonces has only one value
+orig(this) has only one value
+orig(block.timestamp) == 1512986490
+sum(this.StandardToken_own_allowed[].getSubLength()) == 0
+orig(this.StandardToken_own_allowed[post(pair(_addr,msg.sender))].getSubValue()) == 0
+===========================================================================
+SMT.allocateTokens(address[],uint256[]):::EXIT2
+this == orig(this)
+this.Token_own_totalSupply == this.decimals
+this.Owned_own_owner == this.Owned_own_newOwner
+this.Owned_own_owner == orig(this.Owned_own_owner)
+this.Owned_own_owner == orig(this.Owned_own_newOwner)
+this.Controlled_own_transferEnabled == this.Controlled_own_lockFlag
+this.Controlled_own_transferEnabled == orig(this.Controlled_own_transferEnabled)
+this.Controlled_own_transferEnabled == orig(this.Controlled_own_lockFlag)
+this.Controlled_own_locked == orig(this.Controlled_own_locked)
+this.Controlled_own_locked[].getValue() == this.Controlled_own_exclude[].getValue()
+this.Controlled_own_locked[].getValue() == orig(this.Controlled_own_locked[].getValue())
+this.Controlled_own_locked[].getValue() == orig(this.Controlled_own_exclude[].getValue())
+this.Controlled_own_exclude == orig(this.Controlled_own_exclude)
+this.StandardToken_own_balances == orig(this.StandardToken_own_balances)
+this.StandardToken_own_allowed == orig(this.StandardToken_own_allowed)
+this.StandardToken_own_allowed[].getSubLength() == orig(this.StandardToken_own_allowed[].getSubLength())
+this.nonces == orig(this.nonces)
+_owners == orig(_owners)
+_values == orig(_owners)
+msg.sender == orig(msg.sender)
+orig(_owners) == orig(_values)
+sum(this.StandardToken_own_allowed[].getSubLength()) == sum(orig(this.StandardToken_own_allowed[].getSubLength()))
+this.Token_own_totalSupply == 0
+this.Controlled_own_transferEnabled == false
+this.Controlled_own_locked has only one value
+this.Controlled_own_exclude has only one value
+this.StandardToken_own_balances has only one value
+this.StandardToken_own_allowed has only one value
+this.decimals == 0
+this.nonces has only one value
+orig(this) has only one value
+orig(_owners) has only one value
+orig(block.timestamp) == 1512810562
+sum(this.StandardToken_own_allowed[].getSubLength()) == 0
+sum(orig(_values[])) == 3141592653000000000000000000
+===========================================================================
+SMT.enableTransfer(bool):::EXIT2
+this == orig(this)
+this.Token_own_totalSupply == this.decimals
+this.Token_own_totalSupply == this.allocateEndTime
+this.Token_own_totalSupply == orig(msg.value)
+this.Owned_own_owner == this.Owned_own_newOwner
+this.Owned_own_owner == orig(this.Owned_own_owner)
+this.Owned_own_owner == orig(this.Owned_own_newOwner)
+this.Controlled_own_transferEnabled == this.Controlled_own_lockFlag
+this.Controlled_own_transferEnabled == orig(this.Controlled_own_transferEnabled)
+this.Controlled_own_transferEnabled == orig(this.Controlled_own_lockFlag)
+this.Controlled_own_locked == orig(this.Controlled_own_locked)
+this.Controlled_own_locked[].getValue() == this.Controlled_own_exclude[].getValue()
+this.Controlled_own_locked[].getValue() == orig(this.Controlled_own_locked[].getValue())
+this.Controlled_own_locked[].getValue() == orig(this.Controlled_own_exclude[].getValue())
+this.Controlled_own_exclude == orig(this.Controlled_own_exclude)
+this.StandardToken_own_balances == orig(this.StandardToken_own_balances)
+this.StandardToken_own_allowed == orig(this.StandardToken_own_allowed)
+this.StandardToken_own_allowed[].getSubLength() == orig(this.StandardToken_own_allowed[].getSubLength())
+this.decimals == this.allocateEndTime
+this.decimals == orig(msg.value)
+this.allocateEndTime == orig(msg.value)
+this.nonces == orig(this.nonces)
+_enable == orig(_enable)
+msg.sender == orig(msg.sender)
+block.timestamp == orig(block.timestamp)
+sum(this.StandardToken_own_allowed[].getSubLength()) == sum(orig(this.StandardToken_own_allowed[].getSubLength()))
+this.Token_own_totalSupply == 0
+this.Controlled_own_transferEnabled == false
+this.Controlled_own_locked has only one value
+this.Controlled_own_exclude has only one value
+this.StandardToken_own_balances has only one value
+this.StandardToken_own_allowed has only one value
+this.decimals == 0
+this.allocateEndTime == 0
+this.nonces has only one value
+block.timestamp one of { 1512811869, 1512812065, 1513127573 }
+orig(this) has only one value
+orig(msg.value) == 0
+orig(block.timestamp) one of { 1512811869, 1512812065, 1513127573 }
+sum(this.StandardToken_own_allowed[].getSubLength()) == 0
+===========================================================================
+SMT.setExclude(address):::EXIT2
+this == orig(this)
+this.Token_own_totalSupply == this.decimals
+this.Token_own_totalSupply == orig(this.StandardToken_own_allowed[post(pair(_addr,msg.sender))].getSubValue())
+this.Owned_own_owner == this.Owned_own_newOwner
+this.Owned_own_owner == orig(this.Owned_own_owner)
+this.Owned_own_owner == orig(this.Owned_own_newOwner)
+this.Controlled_own_transferEnabled == this.Controlled_own_lockFlag
+this.Controlled_own_transferEnabled == orig(this.Controlled_own_transferEnabled)
+this.Controlled_own_transferEnabled == orig(this.Controlled_own_lockFlag)
+this.Controlled_own_locked == orig(this.Controlled_own_locked)
+this.Controlled_own_locked[].getValue() == this.Controlled_own_exclude[].getValue()
+this.Controlled_own_locked[].getValue() == orig(this.Controlled_own_locked[].getValue())
+this.Controlled_own_locked[].getValue() == orig(this.Controlled_own_exclude[].getValue())
+this.Controlled_own_exclude == orig(this.Controlled_own_exclude)
+this.StandardToken_own_balances == orig(this.StandardToken_own_balances)
+this.StandardToken_own_allowed == orig(this.StandardToken_own_allowed)
+this.StandardToken_own_allowed[].getSubLength() == orig(this.StandardToken_own_allowed[].getSubLength())
+this.decimals == orig(this.StandardToken_own_allowed[post(pair(_addr,msg.sender))].getSubValue())
+this.nonces == orig(this.nonces)
+_addr == orig(_addr)
+msg.sender == orig(msg.sender)
+sum(this.StandardToken_own_allowed[].getSubLength()) == sum(orig(this.StandardToken_own_allowed[].getSubLength()))
+this.Token_own_totalSupply == 0
+this.Controlled_own_transferEnabled == false
+this.Controlled_own_locked has only one value
+this.Controlled_own_exclude has only one value
+this.StandardToken_own_balances has only one value
+this.StandardToken_own_allowed has only one value
+this.decimals == 0
+this.nonces has only one value
+orig(this) has only one value
+orig(block.timestamp) == 1512984595
+sum(this.StandardToken_own_allowed[].getSubLength()) == 0
+orig(this.StandardToken_own_allowed[post(pair(_addr,msg.sender))].getSubValue()) == 0
+===========================================================================
+SMT.transfer(address,uint256):::EXIT2
+this == orig(this)
+this.Token_own_totalSupply == this.decimals
+this.Token_own_totalSupply == this.allocateEndTime
+this.Token_own_totalSupply == msg.value
+this.Token_own_totalSupply == orig(this.Token_own_totalSupply)
+this.Token_own_totalSupply == orig(this.decimals)
+this.Token_own_totalSupply == orig(this.allocateEndTime)
+this.Token_own_totalSupply == orig(msg.value)
+this.Token_own_totalSupply == sum(this.StandardToken_own_balances[].getValue())
+this.Token_own_totalSupply == orig(this.StandardToken_own_allowed[post(pair(_to,msg.sender))].getSubValue())
+this.Owned_own_owner == this.Owned_own_newOwner
+this.Owned_own_owner == orig(this.Owned_own_owner)
+this.Owned_own_owner == orig(this.Owned_own_newOwner)
+this.Controlled_own_transferEnabled == this.Controlled_own_lockFlag
+this.Controlled_own_transferEnabled == orig(this.Controlled_own_transferEnabled)
+this.Controlled_own_transferEnabled == orig(this.Controlled_own_lockFlag)
+this.Controlled_own_locked == orig(this.Controlled_own_locked)
+this.Controlled_own_locked[].getValue() == this.Controlled_own_exclude[].getValue()
+this.Controlled_own_locked[].getValue() == orig(this.Controlled_own_locked[].getValue())
+this.Controlled_own_locked[].getValue() == orig(this.Controlled_own_exclude[].getValue())
+this.Controlled_own_exclude == orig(this.Controlled_own_exclude)
+this.StandardToken_own_balances == orig(this.StandardToken_own_balances)
+this.StandardToken_own_allowed == orig(this.StandardToken_own_allowed)
+this.StandardToken_own_allowed[].getSubLength() == orig(this.StandardToken_own_allowed[].getSubLength())
+this.decimals == this.allocateEndTime
+this.decimals == msg.value
+this.decimals == orig(this.Token_own_totalSupply)
+this.decimals == orig(this.decimals)
+this.decimals == orig(this.allocateEndTime)
+this.decimals == orig(msg.value)
+this.decimals == sum(this.StandardToken_own_balances[].getValue())
+this.decimals == orig(this.StandardToken_own_allowed[post(pair(_to,msg.sender))].getSubValue())
+this.allocateEndTime == msg.value
+this.allocateEndTime == orig(this.Token_own_totalSupply)
+this.allocateEndTime == orig(this.decimals)
+this.allocateEndTime == orig(this.allocateEndTime)
+this.allocateEndTime == orig(msg.value)
+this.allocateEndTime == sum(this.StandardToken_own_balances[].getValue())
+this.allocateEndTime == orig(this.StandardToken_own_allowed[post(pair(_to,msg.sender))].getSubValue())
+this.nonces == orig(this.nonces)
+_to == orig(_to)
+_value == orig(_value)
+msg.sender == orig(msg.sender)
+msg.value == orig(this.Token_own_totalSupply)
+msg.value == orig(this.decimals)
+msg.value == orig(this.allocateEndTime)
+msg.value == orig(msg.value)
+msg.value == sum(this.StandardToken_own_balances[].getValue())
+msg.value == orig(this.StandardToken_own_allowed[post(pair(_to,msg.sender))].getSubValue())
+block.timestamp == orig(block.timestamp)
+orig(this.Token_own_totalSupply) == orig(this.decimals)
+orig(this.Token_own_totalSupply) == orig(this.allocateEndTime)
+orig(this.Token_own_totalSupply) == orig(msg.value)
+orig(this.Token_own_totalSupply) == sum(this.StandardToken_own_balances[].getValue())
+orig(this.Token_own_totalSupply) == orig(this.StandardToken_own_allowed[post(pair(_to,msg.sender))].getSubValue())
+orig(this.decimals) == orig(this.allocateEndTime)
+orig(this.decimals) == orig(msg.value)
+orig(this.decimals) == sum(this.StandardToken_own_balances[].getValue())
+orig(this.decimals) == orig(this.StandardToken_own_allowed[post(pair(_to,msg.sender))].getSubValue())
+orig(this.allocateEndTime) == orig(msg.value)
+orig(this.allocateEndTime) == sum(this.StandardToken_own_balances[].getValue())
+orig(this.allocateEndTime) == orig(this.StandardToken_own_allowed[post(pair(_to,msg.sender))].getSubValue())
+orig(msg.value) == sum(this.StandardToken_own_balances[].getValue())
+orig(msg.value) == orig(this.StandardToken_own_allowed[post(pair(_to,msg.sender))].getSubValue())
+sum(this.StandardToken_own_balances[].getValue()) == orig(this.StandardToken_own_allowed[post(pair(_to,msg.sender))].getSubValue())
+sum(this.StandardToken_own_allowed[].getSubLength()) == sum(orig(this.StandardToken_own_allowed[].getSubLength()))
+this.Token_own_totalSupply == 0
+this.Controlled_own_transferEnabled == false
+this.Controlled_own_locked has only one value
+this.Controlled_own_locked[].getValue() elements != null
+this.Controlled_own_exclude has only one value
+this.StandardToken_own_balances has only one value
+this.StandardToken_own_allowed has only one value
+this.decimals == 0
+this.allocateEndTime == 0
+this.nonces has only one value
+msg.value == 0
+orig(this) has only one value
+orig(this) != null
+orig(this.Token_own_totalSupply) == 0
+orig(this.decimals) == 0
+orig(this.allocateEndTime) == 0
+orig(msg.value) == 0
+sum(this.StandardToken_own_balances[].getValue()) == 0
+sum(this.StandardToken_own_allowed[].getSubLength()) == 0
+orig(this.StandardToken_own_allowed[post(pair(_to,msg.sender))].getSubValue()) == 0
+this.Token_own_totalSupply < _value
+this.Token_own_totalSupply < block.timestamp
+this.Token_own_totalSupply < orig(_value)
+this.Token_own_totalSupply < orig(block.timestamp)
+this.Owned_own_owner != orig(_to)
+this.Owned_own_owner != orig(msg.sender)
+this.decimals < _value
+this.decimals < block.timestamp
+this.decimals < orig(_value)
+this.decimals < orig(block.timestamp)
+this.allocateEndTime < _value
+this.allocateEndTime < block.timestamp
+this.allocateEndTime < orig(_value)
+this.allocateEndTime < orig(block.timestamp)
+msg.value < block.timestamp
+msg.value < orig(_value)
+msg.value < orig(block.timestamp)
+orig(this.Token_own_totalSupply) < orig(_value)
+orig(this.Token_own_totalSupply) < orig(block.timestamp)
+orig(this.decimals) < orig(_value)
+orig(this.decimals) < orig(block.timestamp)
+orig(this.allocateEndTime) < orig(_value)
+orig(this.allocateEndTime) < orig(block.timestamp)
+orig(_to) != orig(msg.sender)
+orig(msg.value) < orig(block.timestamp)
+Exiting Daikon.
