@@ -1,0 +1,140 @@
+Daikon version 5.8.6, released December 2, 2020; http://plse.cs.washington.edu/daikon.
+Reading declaration files Processing trace data; reading 1 dtrace file:
+Warning: Daikon is using a dataflow hierarchy analysis on a data trace that does not appear to be over a program execution, consider running Daikon with the --nohierarchy flag.
+
+===========================================================================
+AnyswapV4Router.anySwapInAuto(bytes32,address,address,uint256,uint256):::EXIT2
+this == orig(this)
+this._oldMPC == this._newMPC
+this._oldMPC == orig(this._oldMPC)
+this._oldMPC == orig(this._newMPC)
+this._newMPCEffectiveTime == msg.value
+this._newMPCEffectiveTime == orig(this._newMPCEffectiveTime)
+this._newMPCEffectiveTime == orig(msg.value)
+txs == orig(txs)
+token == orig(token)
+to == orig(to)
+amount == orig(amount)
+fromChainID == orig(fromChainID)
+msg.sender == orig(msg.sender)
+msg.value == orig(this._newMPCEffectiveTime)
+msg.value == orig(msg.value)
+block.timestamp == orig(block.timestamp)
+orig(this._newMPCEffectiveTime) == orig(msg.value)
+this._newMPCEffectiveTime == 0
+msg.value == 0
+orig(this) has only one value
+orig(this) != null
+orig(this._newMPCEffectiveTime) == 0
+orig(msg.value) == 0
+this._oldMPC != orig(token)
+this._oldMPC != orig(to)
+this._oldMPC != orig(msg.sender)
+this._newMPCEffectiveTime < amount
+this._newMPCEffectiveTime < fromChainID
+this._newMPCEffectiveTime < block.timestamp
+this._newMPCEffectiveTime < orig(amount)
+this._newMPCEffectiveTime < orig(fromChainID)
+this._newMPCEffectiveTime < orig(block.timestamp)
+fromChainID < block.timestamp
+fromChainID < orig(amount)
+fromChainID < orig(block.timestamp)
+msg.value < block.timestamp
+msg.value < orig(amount)
+msg.value < orig(fromChainID)
+msg.value < orig(block.timestamp)
+orig(this._newMPCEffectiveTime) < orig(amount)
+orig(this._newMPCEffectiveTime) < orig(fromChainID)
+orig(this._newMPCEffectiveTime) < orig(block.timestamp)
+orig(token) != orig(to)
+orig(token) != orig(msg.sender)
+orig(to) != orig(msg.sender)
+orig(fromChainID) < orig(block.timestamp)
+orig(msg.value) < orig(block.timestamp)
+===========================================================================
+AnyswapV4Router.anySwapOut(address,address,uint256,uint256):::EXIT2
+this == orig(this)
+this._oldMPC == this._newMPC
+this._oldMPC == orig(this._oldMPC)
+this._oldMPC == orig(this._newMPC)
+this._newMPCEffectiveTime == msg.value
+this._newMPCEffectiveTime == orig(this._newMPCEffectiveTime)
+this._newMPCEffectiveTime == orig(msg.value)
+token == orig(token)
+to == orig(to)
+amount == orig(amount)
+toChainID == orig(toChainID)
+msg.sender == orig(to)
+msg.value == orig(this._newMPCEffectiveTime)
+msg.value == orig(msg.value)
+block.timestamp == orig(block.timestamp)
+orig(this._newMPCEffectiveTime) == orig(msg.value)
+orig(to) == orig(msg.sender)
+this._newMPCEffectiveTime == 0
+toChainID one of { 56, 137 }
+msg.value == 0
+orig(this) has only one value
+orig(this._newMPCEffectiveTime) == 0
+orig(toChainID) one of { 56, 137 }
+orig(msg.value) == 0
+===========================================================================
+AnyswapV4Router.anySwapOutUnderlying(address,address,uint256,uint256):::EXIT2
+this == orig(this)
+this._oldMPC == this._newMPC
+this._oldMPC == orig(this._oldMPC)
+this._oldMPC == orig(this._newMPC)
+this._newMPCEffectiveTime == msg.value
+this._newMPCEffectiveTime == orig(this._newMPCEffectiveTime)
+this._newMPCEffectiveTime == orig(msg.value)
+token == orig(token)
+to == orig(to)
+amount == orig(amount)
+toChainID == orig(toChainID)
+msg.sender == orig(msg.sender)
+msg.value == orig(this._newMPCEffectiveTime)
+msg.value == orig(msg.value)
+block.timestamp == orig(block.timestamp)
+orig(this._newMPCEffectiveTime) == orig(msg.value)
+this._newMPCEffectiveTime == 0
+msg.value == 0
+orig(this) has only one value
+orig(this) != null
+orig(this._newMPCEffectiveTime) == 0
+orig(msg.value) == 0
+this._oldMPC != orig(token)
+this._oldMPC != orig(to)
+this._oldMPC != orig(msg.sender)
+this._newMPCEffectiveTime < amount
+this._newMPCEffectiveTime < toChainID
+this._newMPCEffectiveTime < block.timestamp
+this._newMPCEffectiveTime < orig(amount)
+this._newMPCEffectiveTime < orig(toChainID)
+this._newMPCEffectiveTime < orig(block.timestamp)
+toChainID < block.timestamp
+toChainID < orig(amount)
+toChainID < orig(block.timestamp)
+msg.value < block.timestamp
+msg.value < orig(amount)
+msg.value < orig(toChainID)
+msg.value < orig(block.timestamp)
+orig(this._newMPCEffectiveTime) < orig(amount)
+orig(this._newMPCEffectiveTime) < orig(toChainID)
+orig(this._newMPCEffectiveTime) < orig(block.timestamp)
+orig(token) != orig(to)
+orig(token) != orig(msg.sender)
+orig(toChainID) < orig(block.timestamp)
+orig(msg.value) < orig(block.timestamp)
+===========================================================================
+AnyswapV4Router.changeMPC(address):::EXIT2
+this == orig(this)
+this._oldMPC == this._newMPC
+this._oldMPC == orig(this._oldMPC)
+this._oldMPC == orig(this._newMPC)
+this._newMPCEffectiveTime == orig(msg.value)
+newMPC == orig(newMPC)
+msg.sender == orig(msg.sender)
+this._newMPCEffectiveTime == 0
+orig(this) has only one value
+orig(msg.value) == 0
+orig(block.timestamp) == 1626015376
+Exiting Daikon.
