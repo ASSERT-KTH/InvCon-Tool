@@ -1,0 +1,48 @@
+Daikon version 5.8.6, released December 2, 2020; http://plse.cs.washington.edu/daikon.
+Reading declaration files Processing trace data; reading 1 dtrace file:
+Warning: Daikon is using a dataflow hierarchy analysis on a data trace that does not appear to be over a program execution, consider running Daikon with the --nohierarchy flag.
+
+===========================================================================
+Vault.mint():::EXIT2
+this == orig(this)
+this.Initializable_own__initialized == this.ReentrancyGuardUpgradeable_own__status
+this.Initializable_own__initializing == this.PausableUpgradeable_own__paused
+this.Initializable_own__initializing == this._DEPRECATED_redeemable_
+this.Initializable_own__initializing == orig(this.Initializable_own__initializing)
+this.Initializable_own__initializing == orig(this.PausableUpgradeable_own__paused)
+this.Initializable_own__initializing == orig(this._DEPRECATED_redeemable_)
+this.ContextUpgradeable_own___gap == orig(this.ContextUpgradeable_own___gap)
+this.ERC165Upgradeable_own___gap == orig(this.ERC165Upgradeable_own___gap)
+this.AccessControlUpgradeable_own__roles == orig(this.AccessControlUpgradeable_own__roles)
+this.AccessControlUpgradeable_own__roles[].getValue() == orig(this.AccessControlUpgradeable_own__roles[].getValue())
+this.AccessControlUpgradeable_own___gap == orig(this.AccessControlUpgradeable_own___gap)
+this.PausableUpgradeable_own___gap == orig(this.PausableUpgradeable_own___gap)
+this.ReentrancyGuardUpgradeable_own___gap == orig(this.ReentrancyGuardUpgradeable_own___gap)
+this._DEPRECATED_WBTC_ == this.uniBTC
+this._DEPRECATED_WBTC_ == this.supplyFeeder
+this._DEPRECATED_WBTC_ == orig(this._DEPRECATED_WBTC_)
+this._DEPRECATED_WBTC_ == orig(this.uniBTC)
+this._DEPRECATED_WBTC_ == orig(this.supplyFeeder)
+this.caps == orig(this.caps)
+this.paused == orig(this.paused)
+this.paused[].getValue() == orig(this.paused[].getValue())
+msg.sender == orig(msg.sender)
+this.Initializable_own__initialized == 0
+this.Initializable_own__initializing == false
+this.ContextUpgradeable_own___gap has only one value
+this.ContextUpgradeable_own___gap[] elements <= 0
+this.ContextUpgradeable_own___gap[] elements >= 0
+this.ERC165Upgradeable_own___gap has only one value
+this.AccessControlUpgradeable_own__roles has only one value
+this.AccessControlUpgradeable_own___gap has only one value
+this.AccessControlUpgradeable_own___gap[] elements <= 0
+this.AccessControlUpgradeable_own___gap[] elements >= 0
+this.PausableUpgradeable_own___gap has only one value
+this.ReentrancyGuardUpgradeable_own__status == 0
+this.ReentrancyGuardUpgradeable_own___gap has only one value
+this.caps has only one value
+this.paused has only one value
+orig(this) has only one value
+orig(msg.value) == 10000000000000000
+orig(block.timestamp) == 1727596055
+Exiting Daikon.
