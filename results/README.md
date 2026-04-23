@@ -139,7 +139,7 @@ git push origin main
 
 ---
 
-## Known Limitations
+## Limitations
 
 1. **Transaction cap:** InvCon fetches at most 2,000 transactions per contract (configurable via `--txs_limit`). Invariants derived from fewer transactions have lower statistical confidence.
 2. **Etherscan dependency:** Results require a live Etherscan connection. API rate limits may cause partial crawls. The API key used during this study has been revoked after use.
@@ -147,6 +147,3 @@ git push origin main
 4. **Proxy contracts:** InvCon queries only the specified address. Proxy contracts that delegate all logic to an implementation contract will return 0 transactions and produce empty invariant files.
 5. **No ERC721 support:** NFT-specific parameter types (`tokenId` + `bytes data` in `safeTransferFrom`) cause non-fatal decoding errors. Some invariants may be absent for ERC721 contracts.
 
----
-
-*Generated April 2026 · InvCon commit: ASSERT-KTH/InvCon-Tool `main`*
