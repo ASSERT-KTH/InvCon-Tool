@@ -1304,16 +1304,25 @@ class Contract(ContractStorageMonitor):
                     self.envs.add(args[_var])
                 else:
                     assert False, f"Unsupported parameter type of {_var} of values {args[_var]}" 
-        
+
         # print(decoded["function"], args)
+        #if decoded["function"] == "constructor":
+         #   return [], [], [], [], args, None 
+
+        #dtrace = []
+
+        #try:
+            #functionABI = list(filter(lambda function: function["type"] == "function"  and function["name"]==decoded["function"], self.tx_abi))[0]
         if decoded["function"] == "constructor":
-            return [], [], [], [], args, None 
-
+            return [], [], [], [], args, None
+        if decoded["function"] in ("fallback", "receive", ""):
+            return [], [], [], [], args, None
+        _matches = list(filter(lambda function: function["type"] == "function" and function["name"] == decoded["function"], self.tx_abi))
+        if not _matches:
+            return [], [], [], [], args, None
+        functionABI = _matches[0]
         dtrace = []
-
-        try:
-            functionABI = list(filter(lambda function: function["type"] == "function"  and function["name"]==decoded["function"], self.tx_abi))[0]
-            
+        try: 
             enter = ["""{0}.{1}:::ENTER
 this_invocation_nonce
 {2}""".format(self.contractName, _get_full_function_name(decoded["function"], functionABI["inputs"]), nonce)]
