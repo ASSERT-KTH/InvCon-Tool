@@ -1,4 +1,4 @@
-# InvCon — Invariant Mining Results
+# InvCon Reproducibility Study
 
 This directory contains the invariant files (`.inv`) produced by running [InvCon](https://github.com/ASSERT-KTH/InvCon-Tool) against a curated dataset of real-world vulnerable Ethereum smart contracts.
 
@@ -83,4 +83,9 @@ while IFS=, read -r name address; do
 done < /tmp/contracts.csv
 ```
 ---
+## References
+
+- Original repository: https://github.com/Franklinliu/InvCon-Tool 
+- Fork:  https://github.com/ASSERT-KTH/InvCon-Tool
+- Paper: "InvCon: A Dynamic Invariant Detector for Ethereum Smart Contract"
 
