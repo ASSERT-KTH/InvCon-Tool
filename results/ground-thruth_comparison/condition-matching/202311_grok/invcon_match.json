@@ -1,0 +1,35 @@
+{
+  "contract_id": "202311_grok",
+  "contract_name": "GROK",
+  "vulnerable_functions": [
+    "transfer",
+    "transferFrom"
+  ],
+  "invcon_sections_examined": [
+    "GROK.transfer(address,uint256):::EXIT2",
+    "GROK.transferFrom(address,address,uint256):::EXIT2"
+  ],
+  "invcon_predicate_counts": {
+    "GROK.transfer(address,uint256):::EXIT2": 584,
+    "GROK.transferFrom(address,address,uint256):::EXIT2": 48
+  },
+  "match_results": [
+    {
+      "ground_truth": {
+        "raw": "sellSlippageBps = 9500 [slippage parameter]",
+        "normalised": "sellslippagebps = 9500 [slippage parameter]",
+        "source_line": 0
+      },
+      "match_type": "NONE",
+      "matched_invcon_predicates": [],
+      "notes": "GT tokens: ['parameter', 'sellslippagebps', 'slippage'] | GT ops: ['='] | No predicate covered both."
+    }
+  ],
+  "summary": {
+    "total_gt_conditions": 1,
+    "exact_matches": 0,
+    "partial_matches": 0,
+    "no_matches": 1,
+    "coverage_pct": 0.0
+  }
+}

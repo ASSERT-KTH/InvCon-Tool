@@ -1,0 +1,32 @@
+{
+  "contract_id": "202306_VINU",
+  "contract_name": "VINU",
+  "vulnerable_functions": [
+    "addLiquidityETH"
+  ],
+  "invcon_sections_examined": [
+    "VINU.addLiquidityETH(address,address,address):::EXIT2"
+  ],
+  "invcon_predicate_counts": {
+    "VINU.addLiquidityETH(address,address,address):::EXIT2": 23
+  },
+  "match_results": [
+    {
+      "ground_truth": {
+        "raw": "size == 0",
+        "normalised": "size == 0",
+        "source_line": 12
+      },
+      "match_type": "NONE",
+      "matched_invcon_predicates": [],
+      "notes": "GT tokens: ['==', 'size'] | GT ops: ['=='] | No predicate covered both."
+    }
+  ],
+  "summary": {
+    "total_gt_conditions": 1,
+    "exact_matches": 0,
+    "partial_matches": 0,
+    "no_matches": 1,
+    "coverage_pct": 0.0
+  }
+}

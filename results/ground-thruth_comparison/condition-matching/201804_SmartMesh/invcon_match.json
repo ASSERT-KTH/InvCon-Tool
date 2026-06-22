@@ -1,0 +1,58 @@
+{
+  "contract_id": "201804_SmartMesh",
+  "contract_name": "SMT",
+  "vulnerable_functions": [
+    "transferProxy"
+  ],
+  "invcon_sections_examined": [],
+  "invcon_predicate_counts": {},
+  "match_results": [
+    {
+      "ground_truth": {
+        "raw": "total >= _feeSmt",
+        "normalised": "total >= _feesmt",
+        "source_line": 11
+      },
+      "match_type": "NONE",
+      "matched_invcon_predicates": [],
+      "notes": "GT tokens: ['>=', '_feesmt', 'total'] | GT ops: ['>='] | No predicate covered both."
+    },
+    {
+      "ground_truth": {
+        "raw": "total >= _value",
+        "normalised": "total >= _value",
+        "source_line": 11
+      },
+      "match_type": "NONE",
+      "matched_invcon_predicates": [],
+      "notes": "GT tokens: ['>=', '_value', 'total'] | GT ops: ['>='] | No predicate covered both."
+    },
+    {
+      "ground_truth": {
+        "raw": "total >= _feeSmt",
+        "normalised": "total >= _feesmt",
+        "source_line": 28
+      },
+      "match_type": "NONE",
+      "matched_invcon_predicates": [],
+      "notes": "GT tokens: ['>=', '_feesmt', 'total'] | GT ops: ['>='] | No predicate covered both."
+    },
+    {
+      "ground_truth": {
+        "raw": "total >= _value",
+        "normalised": "total >= _value",
+        "source_line": 28
+      },
+      "match_type": "NONE",
+      "matched_invcon_predicates": [],
+      "notes": "GT tokens: ['>=', '_value', 'total'] | GT ops: ['>='] | No predicate covered both."
+    }
+  ],
+  "summary": {
+    "total_gt_conditions": 4,
+    "exact_matches": 0,
+    "partial_matches": 0,
+    "no_matches": 4,
+    "coverage_pct": 0.0
+  }
+}

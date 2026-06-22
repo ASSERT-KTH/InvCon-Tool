@@ -1,0 +1,36 @@
+{
+  "contract_id": "202404_HoppyFrogERC",
+  "contract_name": "Hoppy",
+  "vulnerable_functions": [
+    "transfer",
+    "transferFrom",
+    "manualSwap"
+  ],
+  "invcon_sections_examined": [
+    "Hoppy.manualSwap():::EXIT2",
+    "Hoppy.transfer(address,uint256):::EXIT2"
+  ],
+  "invcon_predicate_counts": {
+    "Hoppy.manualSwap():::EXIT2": 34,
+    "Hoppy.transfer(address,uint256):::EXIT2": 727
+  },
+  "match_results": [
+    {
+      "ground_truth": {
+        "raw": "swapAmount <= maxSwapForSell",
+        "normalised": "swapamount <= maxswapforsell",
+        "source_line": 34
+      },
+      "match_type": "NONE",
+      "matched_invcon_predicates": [],
+      "notes": "GT tokens: ['<=', 'maxswapforsell', 'swapamount'] | GT ops: ['<='] | No predicate covered both."
+    }
+  ],
+  "summary": {
+    "total_gt_conditions": 1,
+    "exact_matches": 0,
+    "partial_matches": 0,
+    "no_matches": 1,
+    "coverage_pct": 0.0
+  }
+}

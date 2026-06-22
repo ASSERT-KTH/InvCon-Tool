@@ -1,0 +1,68 @@
+{
+  "contract_id": "202406_APEMAGA",
+  "contract_name": "Tonken",
+  "vulnerable_functions": [
+    "family"
+  ],
+  "invcon_sections_examined": [
+    "Tonken.family(address):::EXIT2"
+  ],
+  "invcon_predicate_counts": {
+    "Tonken.family(address):::EXIT2": 83
+  },
+  "match_results": [
+    {
+      "ground_truth": {
+        "raw": "msg.sender == account",
+        "normalised": "msg.sender == account",
+        "source_line": 11
+      },
+      "match_type": "PARTIAL",
+      "matched_invcon_predicates": [
+        "this.ERC20_own__totalSupply == orig(this.ERC20_own__allowances[post(pair(account,msg.sender))].getSubValue())",
+        "this.ERC20_own__trading == orig(this.ERC20_own__allowances[post(pair(account,msg.sender))].getSubValue())",
+        "this.ERC20_own__decimals == orig(this.ERC20_own__allowances[post(pair(account,msg.sender))].getSubValue())",
+        "account == orig(account)",
+        "msg.sender == orig(msg.sender)",
+        "msg.value == orig(this.ERC20_own__allowances[post(pair(account,msg.sender))].getSubValue())",
+        "orig(this.ERC20_own__totalSupply) == orig(this.ERC20_own__allowances[post(pair(account,msg.sender))].getSubValue())",
+        "orig(this.ERC20_own__trading) == orig(this.ERC20_own__allowances[post(pair(account,msg.sender))].getSubValue())",
+        "orig(this.ERC20_own__decimals) == orig(this.ERC20_own__allowances[post(pair(account,msg.sender))].getSubValue())",
+        "orig(msg.value) == orig(this.ERC20_own__allowances[post(pair(account,msg.sender))].getSubValue())",
+        "sum(this.ERC20_own__balances[].getValue()) == orig(this.ERC20_own__allowances[post(pair(account,msg.sender))].getSubValue())",
+        "orig(this.ERC20_own__allowances[post(pair(account,msg.sender))].getSubValue()) == 0"
+      ],
+      "notes": "Token overlap found; not a literal match"
+    },
+    {
+      "ground_truth": {
+        "raw": "msg.sender == account",
+        "normalised": "msg.sender == account",
+        "source_line": 23
+      },
+      "match_type": "PARTIAL",
+      "matched_invcon_predicates": [
+        "this.ERC20_own__totalSupply == orig(this.ERC20_own__allowances[post(pair(account,msg.sender))].getSubValue())",
+        "this.ERC20_own__trading == orig(this.ERC20_own__allowances[post(pair(account,msg.sender))].getSubValue())",
+        "this.ERC20_own__decimals == orig(this.ERC20_own__allowances[post(pair(account,msg.sender))].getSubValue())",
+        "account == orig(account)",
+        "msg.sender == orig(msg.sender)",
+        "msg.value == orig(this.ERC20_own__allowances[post(pair(account,msg.sender))].getSubValue())",
+        "orig(this.ERC20_own__totalSupply) == orig(this.ERC20_own__allowances[post(pair(account,msg.sender))].getSubValue())",
+        "orig(this.ERC20_own__trading) == orig(this.ERC20_own__allowances[post(pair(account,msg.sender))].getSubValue())",
+        "orig(this.ERC20_own__decimals) == orig(this.ERC20_own__allowances[post(pair(account,msg.sender))].getSubValue())",
+        "orig(msg.value) == orig(this.ERC20_own__allowances[post(pair(account,msg.sender))].getSubValue())",
+        "sum(this.ERC20_own__balances[].getValue()) == orig(this.ERC20_own__allowances[post(pair(account,msg.sender))].getSubValue())",
+        "orig(this.ERC20_own__allowances[post(pair(account,msg.sender))].getSubValue()) == 0"
+      ],
+      "notes": "Token overlap found; not a literal match"
+    }
+  ],
+  "summary": {
+    "total_gt_conditions": 2,
+    "exact_matches": 0,
+    "partial_matches": 2,
+    "no_matches": 0,
+    "coverage_pct": 100.0
+  }
+}

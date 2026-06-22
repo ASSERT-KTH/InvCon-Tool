@@ -1,0 +1,39 @@
+{
+  "contract_id": "202212_JAY",
+  "contract_name": "JAY",
+  "vulnerable_functions": [
+    "buyJay",
+    "sell"
+  ],
+  "invcon_sections_examined": [],
+  "invcon_predicate_counts": {},
+  "match_results": [
+    {
+      "ground_truth": {
+        "raw": "!__lock_modifier0_lock",
+        "normalised": "!__lock_modifier0_lock",
+        "source_line": 14
+      },
+      "match_type": "NONE",
+      "matched_invcon_predicates": [],
+      "notes": "GT tokens: ['__lock_modifier0_lock'] | GT ops: ['!'] | No predicate covered both."
+    },
+    {
+      "ground_truth": {
+        "raw": "!__lock_modifier0_lock",
+        "normalised": "!__lock_modifier0_lock",
+        "source_line": 34
+      },
+      "match_type": "NONE",
+      "matched_invcon_predicates": [],
+      "notes": "GT tokens: ['__lock_modifier0_lock'] | GT ops: ['!'] | No predicate covered both."
+    }
+  ],
+  "summary": {
+    "total_gt_conditions": 2,
+    "exact_matches": 0,
+    "partial_matches": 0,
+    "no_matches": 2,
+    "coverage_pct": 0.0
+  }
+}

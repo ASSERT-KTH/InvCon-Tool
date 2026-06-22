@@ -1,0 +1,40 @@
+{
+  "contract_id": "201804_BEC",
+  "contract_name": "BecToken",
+  "vulnerable_functions": [
+    "batchTransfer"
+  ],
+  "invcon_sections_examined": [
+    "BecToken.batchTransfer(address[],uint256):::EXIT2"
+  ],
+  "invcon_predicate_counts": {
+    "BecToken.batchTransfer(address[],uint256):::EXIT2": 63
+  },
+  "match_results": [
+    {
+      "ground_truth": {
+        "raw": "_value <= uint256(-1) / cnt",
+        "normalised": "_value <= 115792089237316195423570985008687907853269984665640564039457584007913129639935 / cnt",
+        "source_line": 7
+      },
+      "match_type": "PARTIAL",
+      "matched_invcon_predicates": [
+        "this.ERC20Basic_own_totalSupply <= _value",
+        "this.ERC20Basic_own_totalSupply <= orig(_value)",
+        "this.decimals <= _value",
+        "this.decimals <= orig(_value)",
+        "msg.value <= orig(_value)",
+        "orig(this.ERC20Basic_own_totalSupply) <= orig(_value)",
+        "orig(this.decimals) <= orig(_value)"
+      ],
+      "notes": "Token overlap found; not a literal match"
+    }
+  ],
+  "summary": {
+    "total_gt_conditions": 1,
+    "exact_matches": 0,
+    "partial_matches": 1,
+    "no_matches": 0,
+    "coverage_pct": 100.0
+  }
+}

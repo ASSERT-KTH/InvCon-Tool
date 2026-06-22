@@ -1,0 +1,46 @@
+{
+  "contract_id": "202102_Yearn_ydai",
+  "contract_name": "yVault",
+  "vulnerable_functions": [
+    "earn"
+  ],
+  "invcon_sections_examined": [
+    "yVault.earn():::EXIT2"
+  ],
+  "invcon_predicate_counts": {
+    "yVault.earn():::EXIT2": 75
+  },
+  "match_results": [
+    {
+      "ground_truth": {
+        "raw": "msg.sender == governance",
+        "normalised": "msg.sender == governance",
+        "source_line": 15
+      },
+      "match_type": "PARTIAL",
+      "matched_invcon_predicates": [
+        "msg.sender == orig(msg.sender)"
+      ],
+      "notes": "Token overlap found; not a literal match"
+    },
+    {
+      "ground_truth": {
+        "raw": "msg.sender == governance",
+        "normalised": "msg.sender == governance",
+        "source_line": 25
+      },
+      "match_type": "PARTIAL",
+      "matched_invcon_predicates": [
+        "msg.sender == orig(msg.sender)"
+      ],
+      "notes": "Token overlap found; not a literal match"
+    }
+  ],
+  "summary": {
+    "total_gt_conditions": 2,
+    "exact_matches": 0,
+    "partial_matches": 2,
+    "no_matches": 0,
+    "coverage_pct": 100.0
+  }
+}

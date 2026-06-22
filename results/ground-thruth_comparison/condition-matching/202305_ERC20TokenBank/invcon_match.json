@@ -1,0 +1,28 @@
+{
+  "contract_id": "202305_ERC20TokenBank",
+  "contract_name": "ExchangeBetweenPools",
+  "vulnerable_functions": [
+    "doExchange"
+  ],
+  "invcon_sections_examined": [],
+  "invcon_predicate_counts": {},
+  "match_results": [
+    {
+      "ground_truth": {
+        "raw": "namount >= (camount * 995) / 1000",
+        "normalised": "namount >= (camount * 995) / 1000",
+        "source_line": 7
+      },
+      "match_type": "NONE",
+      "matched_invcon_predicates": [],
+      "notes": "GT tokens: ['>=', 'camount', 'namount'] | GT ops: ['>='] | No predicate covered both."
+    }
+  ],
+  "summary": {
+    "total_gt_conditions": 1,
+    "exact_matches": 0,
+    "partial_matches": 0,
+    "no_matches": 1,
+    "coverage_pct": 0.0
+  }
+}

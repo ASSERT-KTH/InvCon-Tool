@@ -1,0 +1,38 @@
+{
+  "contract_id": "202201_Anyswap",
+  "contract_name": "AnyswapV4Router",
+  "vulnerable_functions": [
+    "anySwapOutUnderlyingWithPermit"
+  ],
+  "invcon_sections_examined": [],
+  "invcon_predicate_counts": {},
+  "match_results": [
+    {
+      "ground_truth": {
+        "raw": "v == 27",
+        "normalised": "v == 27",
+        "source_line": 7
+      },
+      "match_type": "NONE",
+      "matched_invcon_predicates": [],
+      "notes": "GT tokens: ['=='] | GT ops: ['=='] | No predicate covered both."
+    },
+    {
+      "ground_truth": {
+        "raw": "v == 28",
+        "normalised": "v == 28",
+        "source_line": 7
+      },
+      "match_type": "NONE",
+      "matched_invcon_predicates": [],
+      "notes": "GT tokens: ['=='] | GT ops: ['=='] | No predicate covered both."
+    }
+  ],
+  "summary": {
+    "total_gt_conditions": 2,
+    "exact_matches": 0,
+    "partial_matches": 0,
+    "no_matches": 2,
+    "coverage_pct": 0.0
+  }
+}

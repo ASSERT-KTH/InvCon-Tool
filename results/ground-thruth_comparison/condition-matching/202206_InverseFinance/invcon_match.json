@@ -1,0 +1,38 @@
+{
+  "contract_id": "202206_InverseFinance",
+  "contract_name": "YVCrv3CryptoFeed",
+  "vulnerable_functions": [
+    "latestAnswer"
+  ],
+  "invcon_sections_examined": [],
+  "invcon_predicate_counts": {},
+  "match_results": [
+    {
+      "ground_truth": {
+        "raw": "crvLPTokenPrice >= lower",
+        "normalised": "crvlptokenprice >= lower",
+        "source_line": 14
+      },
+      "match_type": "NONE",
+      "matched_invcon_predicates": [],
+      "notes": "GT tokens: ['>=', 'crvlptokenprice', 'lower'] | GT ops: ['>='] | No predicate covered both."
+    },
+    {
+      "ground_truth": {
+        "raw": "crvLPTokenPrice <= upper,",
+        "normalised": "crvlptokenprice <= upper,",
+        "source_line": 14
+      },
+      "match_type": "NONE",
+      "matched_invcon_predicates": [],
+      "notes": "GT tokens: ['<=', 'crvlptokenprice', 'upper'] | GT ops: ['<='] | No predicate covered both."
+    }
+  ],
+  "summary": {
+    "total_gt_conditions": 2,
+    "exact_matches": 0,
+    "partial_matches": 0,
+    "no_matches": 2,
+    "coverage_pct": 0.0
+  }
+}

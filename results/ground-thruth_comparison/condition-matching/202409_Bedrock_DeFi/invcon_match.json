@@ -1,0 +1,28 @@
+{
+  "contract_id": "202409_Bedrock_DeFi",
+  "contract_name": "Vault",
+  "vulnerable_functions": [
+    "mint()"
+  ],
+  "invcon_sections_examined": [],
+  "invcon_predicate_counts": {},
+  "match_results": [
+    {
+      "ground_truth": {
+        "raw": "uniBTCAmount * 1e10 < msg.value",
+        "normalised": "unibtcamount * 1e10 < msg.value",
+        "source_line": 8
+      },
+      "match_type": "NONE",
+      "matched_invcon_predicates": [],
+      "notes": "GT tokens: ['e10', 'msg.value', 'unibtcamount'] | GT ops: ['<'] | No predicate covered both."
+    }
+  ],
+  "summary": {
+    "total_gt_conditions": 1,
+    "exact_matches": 0,
+    "partial_matches": 0,
+    "no_matches": 1,
+    "coverage_pct": 0.0
+  }
+}
