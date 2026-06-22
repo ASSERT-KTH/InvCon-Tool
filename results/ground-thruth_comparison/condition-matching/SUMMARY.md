@@ -113,11 +113,8 @@ and this README is generated from their contents.
 |---|---|---|---|---|---|
 | **201804_BEC** | `batchTransfer` | Overflow | `_value <= uint256(-1) / cnt` | `this.ERC20Basic_own_totalSupply <= _value` | 🟡 PARTIAL |
 | **201804_SmartMesh** | `transferProxy` | Overflow | `total >= _feeSmt` / `total >= _value` | — (function not in .inv) | ❌ NONE |
-| **202008_Opyn** | `exercise` | Logic Flaw | *(result not available)* | — | — |
 | **202102_Yearn_ydai** | `earn` | Slippage | `msg.sender == governance` | `msg.sender == orig(msg.sender)` | 🟡 PARTIAL |
-| **202109_Nimbus** | `swap` | Logic Flaw | *(result not available)* | — | — |
 | **202201_Anyswap** | `anySwapOutUnderlyingWithPermit` | Incorrect Validation | `v == 27` / `v == 28` | — (function not in .inv) | ❌ NONE |
-| **202202_TecraSpace** | `burnFrom` | Logic Flaw | *(result not available)* | — | — |
 | **202206_InverseFinance** | `latestAnswer` | Flash Loan | `crvLPTokenPrice >= lower` / `crvLPTokenPrice <= upper` | — (function not in .inv) | ❌ NONE |
 | **202210_N00d** | `enter` | Reentrancy | `!__lock_modifier0_lock` | — (lock var introduced by patch) | ❌ NONE |
 | **202210_Uerii** | `mint` | Access Control | `totalSupply() + amount <= CAP` | — (no matching predicate) | ❌ NONE |
@@ -126,17 +123,10 @@ and this README is generated from their contents.
 | **202305_ERC20TokenBank** | `doExchange` | Price Manipulation | `namount >= (camount * 995) / 1000` | — (function not in .inv) | ❌ NONE |
 | **202306_VINU** | `addLiquidityETH` | Price Manipulation | `size == 0` | — (no matching predicate) | ❌ NONE |
 | **202308_Uwerx** | `transfer`, `transferFrom` | Logic Flaw | `uniswapPoolAddress != address(0x1)` / `_balances[to] == (toBalance - userTransferAmount)` | `to == orig(to)` (for balance condition) | 🟡 PARTIAL (1/2) |
-| **202309_uniclyNFT** | `deposit`, `withdraw` | Reentrancy | *(result not available)* | — | — |
-| **202309_JumpFarm** | `unstake` | Logic Flaw | *(result not available)* | — | — |
 | **202311_grok** | `transfer`, `transferFrom` | Slippage | `sellSlippageBps = 9500` *(implicit slippage param)* | — (state var introduced by patch) | ❌ NONE |
 | **202404_HoppyFrogERC** | `transfer`, `transferFrom`, `manualSwap` | Logic Flaw | `swapAmount <= maxSwapForSell` | — (no matching predicate) | ❌ NONE |
 | **202406_APEMAGA** | `family` | Logic Flaw | `msg.sender == account` | `msg.sender == orig(msg.sender)` / `account == orig(account)` | 🟡 PARTIAL |
-| **202406_JokInTheBox** | `unstake` | Logic Flaw | *(result not available)* | — | — |
-| **202406_WIFCOIN_ETH** | `claimEarned` | Logic Flaw | *(result not available)* | — | — |
-| **202408_OMPxContract** | `purchase`, `buyBack` | Flash Loan | *(result not available)* | — | — |
 | **202409_Bedrock_DeFi** | `mint` | Logic Flaw | `uniBTCAmount * 1e10 < msg.value` | — (function not in .inv) | ❌ NONE |
-| **202409_OnyxDAO** | `liquidateWithSingleRepay` | Logic Flaw | *(result not available)* | — | — |
-| **202603_AlkemiEarn** | `liquidateBorrow` | Logic Flaw | *(result not available)* | — | — |
 
 ---
 
