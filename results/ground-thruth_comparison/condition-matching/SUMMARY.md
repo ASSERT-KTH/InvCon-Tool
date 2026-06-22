@@ -137,7 +137,6 @@ and this README is generated from their contents.
 | ✅ EXACT | 0 | 0% |
 | 🟡 PARTIAL | 5 | 28% |
 | ❌ NONE | 13 | 72% |
-| — Not evaluated / tool gap | 8 | — |
 
 **Evaluated contracts:** 18 / 26  
 **Contracts with InvCon output for the vulnerable function:** 9 / 18
