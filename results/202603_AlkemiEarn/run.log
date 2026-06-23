@@ -1,6 +1,127 @@
+too many internal transactions
 Traceback (most recent call last):
-  File "/app/invcon/crawler/crawler.py", line 435, in crawl
-    contractName, compilerVersion, constructorArguments, sourcecode = self.getSourceCode()
-  File "/app/invcon/crawler/crawler.py", line 341, in getSourceCode
-    contractName = sourcecode[0]["ContractName"]
-TypeError: string indices must be integers
+  File "/app/invcon/crawler/crawler.py", line 94, in getExternalTxHasInternalTransactions
+    assert False, ValueError("too many internal transactions (greater than 10k shown by etherscan.io)")
+AssertionError: too many internal transactions (greater than 10k shown by etherscan.io)
+Internal message calls (except fallback function): 0
+{
+  abi: '/home/realworldcontracts/0x85A948Fd70B2b415bdA93324581fb5FfF1293DF7/0x85A948Fd70B2b415bdA93324581fb5FfF1293DF7.abi',
+  tx: '/home/realworldcontracts/0x85A948Fd70B2b415bdA93324581fb5FfF1293DF7/txs.json',
+  output: '/home/realworldcontracts/0x85A948Fd70B2b415bdA93324581fb5FfF1293DF7/tx_decode.json'
+}
+crawl contract state changes along transactions...
+[?25l|                                        | ▁▃▅ 0/1 [0%] in 0s (~0s, 0.0/s) |                                        | ▂▄▆ 0/1 [0%] in 0s (~0s, 0.0/s) |                                        | ▃▅▇ 0/1 [0%] in 0s (~0s, 0.0/s) |                                        | ▄▆█ 0/1 [0%] in 0s (~0s, 0.0/s) |                                        | ▅▇▇ 0/1 [0%] in 0s (~0s, 0.0/s) |                                        | ▆█▆ 0/1 [0%] in 1s (~0s, 0.0/s) [?25h[J|████████████████████████████████████████| 1/1 [100%] in 0.6s (1.64/s) [K
+Installing solc '0.4.25'...
+Version '0.4.25' installed.
+Switched global version to 0.4.25
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/crytic_compile/platform/solc.py", line 581, in _run_solc
+    ret: Dict = json.loads(stdout)
+  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/slither/slither.py", line 97, in __init__
+    crytic_compile = CryticCompile(target, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/crytic_compile/crytic_compile.py", line 211, in __init__
+    self._compile(**kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/crytic_compile/crytic_compile.py", line 633, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/crytic_compile/platform/solc.py", line 150, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/crytic_compile/platform/solc.py", line 279, in _get_targets_json
+    return _run_solc(
+  File "/usr/local/lib/python3.10/dist-packages/crytic_compile/platform/solc.py", line 585, in _run_solc
+    raise InvalidCompilation(f"Invalid solc compilation {stderr}")
+crytic_compile.platform.exceptions.InvalidCompilation: Invalid solc compilation /home/realworldcontracts/0x85A948Fd70B2b415bdA93324581fb5FfF1293DF7/0x85A948Fd70B2b415bdA93324581fb5FfF1293DF7.sol:3:1: Error: Source file requires different compiler version (current compiler is 0.4.25+commit.59dbf8f1.Linux.g++ - note that nightly builds are considered to be strictly less than the released version
+pragma solidity 0.4.24;
+^---------------------^
+/home/realworldcontracts/0x85A948Fd70B2b415bdA93324581fb5FfF1293DF7/0x85A948Fd70B2b415bdA93324581fb5FfF1293DF7.sol:185:1: Error: Source file requires different compiler version (current compiler is 0.4.25+commit.59dbf8f1.Linux.g++ - note that nightly builds are considered to be strictly less than the released version
+pragma solidity 0.4.24;
+^---------------------^
+/home/realworldcontracts/0x85A948Fd70B2b415bdA93324581fb5FfF1293DF7/0x85A948Fd70B2b415bdA93324581fb5FfF1293DF7.sol:267:1: Error: Source file requires different compiler version (current compiler is 0.4.25+commit.59dbf8f1.Linux.g++ - note that nightly builds are considered to be strictly less than the released version
+pragma solidity 0.4.24;
+^---------------------^
+/home/realworldcontracts/0x85A948Fd70B2b415bdA93324581fb5FfF1293DF7/0x85A948Fd70B2b415bdA93324581fb5FfF1293DF7.sol:491:1: Error: Source file requires different compiler version (current compiler is 0.4.25+commit.59dbf8f1.Linux.g++ - note that nightly builds are considered to be strictly less than the released version
+pragma solidity 0.4.24;
+^---------------------^
+/home/realworldcontracts/0x85A948Fd70B2b415bdA93324581fb5FfF1293DF7/0x85A948Fd70B2b415bdA93324581fb5FfF1293DF7.sol:535:1: Error: Source file requires different compiler version (current compiler is 0.4.25+commit.59dbf8f1.Linux.g++ - note that nightly builds are considered to be strictly less than the released version
+pragma solidity 0.4.24;
+^---------------------^
+/home/realworldcontracts/0x85A948Fd70B2b415bdA93324581fb5FfF1293DF7/0x85A948Fd70B2b415bdA93324581fb5FfF1293DF7.sol:614:1: Error: Source file requires different compiler version (current compiler is 0.4.25+commit.59dbf8f1.Linux.g++ - note that nightly builds are considered to be strictly less than the released version
+pragma solidity 0.4.24;
+^---------------------^
+/home/realworldcontracts/0x85A948Fd70B2b415bdA93324581fb5FfF1293DF7/0x85A948Fd70B2b415bdA93324581fb5FfF1293DF7.sol:699:1: Error: Source file requires different compiler version (current compiler is 0.4.25+commit.59dbf8f1.Linux.g++ - note that nightly builds are considered to be strictly less than the released version
+pragma solidity 0.4.24;
+^---------------------^
+/home/realworldcontracts/0x85A948Fd70B2b415bdA93324581fb5FfF1293DF7/0x85A948Fd70B2b415bdA93324581fb5FfF1293DF7.sol:870:1: Error: Source file requires different compiler version (current compiler is 0.4.25+commit.59dbf8f1.Linux.g++ - note that nightly builds are considered to be strictly less than the released version
+pragma solidity 0.4.24;
+^---------------------^
+/home/realworldcontracts/0x85A948Fd70B2b415bdA93324581fb5FfF1293DF7/0x85A948Fd70B2b415bdA93324581fb5FfF1293DF7.sol:907:1: Error: Source file requires different compiler version (current compiler is 0.4.25+commit.59dbf8f1.Linux.g++ - note that nightly builds are considered to be strictly less than the released version
+pragma solidity 0.4.24;
+^---------------------^
+/home/realworldcontracts/0x85A948Fd70B2b415bdA93324581fb5FfF1293DF7/0x85A948Fd70B2b415bdA93324581fb5FfF1293DF7.sol:1073:1: Error: Source file requires different compiler version (current compiler is 0.4.25+commit.59dbf8f1.Linux.g++ - note that nightly builds are considered to be strictly less than the released version
+pragma solidity 0.4.24;
+^---------------------^
+/home/realworldcontracts/0x85A948Fd70B2b415bdA93324581fb5FfF1293DF7/0x85A948Fd70B2b415bdA93324581fb5FfF1293DF7.sol:1143:1: Error: Source file requires different compiler version (current compiler is 0.4.25+commit.59dbf8f1.Linux.g++ - note that nightly builds are considered to be strictly less than the released version
+pragma solidity 0.4.24;
+^---------------------^
+/home/realworldcontracts/0x85A948Fd70B2b415bdA93324581fb5FfF1293DF7/0x85A948Fd70B2b415bdA93324581fb5FfF1293DF7.sol:1191:1: Error: Source file requires different compiler version (current compiler is 0.4.25+commit.59dbf8f1.Linux.g++ - note that nightly builds are considered to be strictly less than the released version
+pragma solidity 0.4.24;
+^---------------------^
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/invcon/crawler/crawler.py", line 470, in crawl
+    generateStorageLayout(sol_file= results["sourcecode_file"], contractName=results["name"], compilerVersion=results["compiler_version"], outStorageFile=results["storageLayout_file"])
+  File "/app/invcon/parsing/storageLayout.py", line 195, in main_impl
+    ss = Slither(sol_file)
+  File "/usr/local/lib/python3.10/dist-packages/slither/slither.py", line 101, in __init__
+    raise SlitherError(f"Invalid compilation: \n{str(e)}")
+slither.exceptions.SlitherError: Invalid compilation: 
+Invalid solc compilation /home/realworldcontracts/0x85A948Fd70B2b415bdA93324581fb5FfF1293DF7/0x85A948Fd70B2b415bdA93324581fb5FfF1293DF7.sol:3:1: Error: Source file requires different compiler version (current compiler is 0.4.25+commit.59dbf8f1.Linux.g++ - note that nightly builds are considered to be strictly less than the released version
+pragma solidity 0.4.24;
+^---------------------^
+/home/realworldcontracts/0x85A948Fd70B2b415bdA93324581fb5FfF1293DF7/0x85A948Fd70B2b415bdA93324581fb5FfF1293DF7.sol:185:1: Error: Source file requires different compiler version (current compiler is 0.4.25+commit.59dbf8f1.Linux.g++ - note that nightly builds are considered to be strictly less than the released version
+pragma solidity 0.4.24;
+^---------------------^
+/home/realworldcontracts/0x85A948Fd70B2b415bdA93324581fb5FfF1293DF7/0x85A948Fd70B2b415bdA93324581fb5FfF1293DF7.sol:267:1: Error: Source file requires different compiler version (current compiler is 0.4.25+commit.59dbf8f1.Linux.g++ - note that nightly builds are considered to be strictly less than the released version
+pragma solidity 0.4.24;
+^---------------------^
+/home/realworldcontracts/0x85A948Fd70B2b415bdA93324581fb5FfF1293DF7/0x85A948Fd70B2b415bdA93324581fb5FfF1293DF7.sol:491:1: Error: Source file requires different compiler version (current compiler is 0.4.25+commit.59dbf8f1.Linux.g++ - note that nightly builds are considered to be strictly less than the released version
+pragma solidity 0.4.24;
+^---------------------^
+/home/realworldcontracts/0x85A948Fd70B2b415bdA93324581fb5FfF1293DF7/0x85A948Fd70B2b415bdA93324581fb5FfF1293DF7.sol:535:1: Error: Source file requires different compiler version (current compiler is 0.4.25+commit.59dbf8f1.Linux.g++ - note that nightly builds are considered to be strictly less than the released version
+pragma solidity 0.4.24;
+^---------------------^
+/home/realworldcontracts/0x85A948Fd70B2b415bdA93324581fb5FfF1293DF7/0x85A948Fd70B2b415bdA93324581fb5FfF1293DF7.sol:614:1: Error: Source file requires different compiler version (current compiler is 0.4.25+commit.59dbf8f1.Linux.g++ - note that nightly builds are considered to be strictly less than the released version
+pragma solidity 0.4.24;
+^---------------------^
+/home/realworldcontracts/0x85A948Fd70B2b415bdA93324581fb5FfF1293DF7/0x85A948Fd70B2b415bdA93324581fb5FfF1293DF7.sol:699:1: Error: Source file requires different compiler version (current compiler is 0.4.25+commit.59dbf8f1.Linux.g++ - note that nightly builds are considered to be strictly less than the released version
+pragma solidity 0.4.24;
+^---------------------^
+/home/realworldcontracts/0x85A948Fd70B2b415bdA93324581fb5FfF1293DF7/0x85A948Fd70B2b415bdA93324581fb5FfF1293DF7.sol:870:1: Error: Source file requires different compiler version (current compiler is 0.4.25+commit.59dbf8f1.Linux.g++ - note that nightly builds are considered to be strictly less than the released version
+pragma solidity 0.4.24;
+^---------------------^
+/home/realworldcontracts/0x85A948Fd70B2b415bdA93324581fb5FfF1293DF7/0x85A948Fd70B2b415bdA93324581fb5FfF1293DF7.sol:907:1: Error: Source file requires different compiler version (current compiler is 0.4.25+commit.59dbf8f1.Linux.g++ - note that nightly builds are considered to be strictly less than the released version
+pragma solidity 0.4.24;
+^---------------------^
+/home/realworldcontracts/0x85A948Fd70B2b415bdA93324581fb5FfF1293DF7/0x85A948Fd70B2b415bdA93324581fb5FfF1293DF7.sol:1073:1: Error: Source file requires different compiler version (current compiler is 0.4.25+commit.59dbf8f1.Linux.g++ - note that nightly builds are considered to be strictly less than the released version
+pragma solidity 0.4.24;
+^---------------------^
+/home/realworldcontracts/0x85A948Fd70B2b415bdA93324581fb5FfF1293DF7/0x85A948Fd70B2b415bdA93324581fb5FfF1293DF7.sol:1143:1: Error: Source file requires different compiler version (current compiler is 0.4.25+commit.59dbf8f1.Linux.g++ - note that nightly builds are considered to be strictly less than the released version
+pragma solidity 0.4.24;
+^---------------------^
+/home/realworldcontracts/0x85A948Fd70B2b415bdA93324581fb5FfF1293DF7/0x85A948Fd70B2b415bdA93324581fb5FfF1293DF7.sol:1191:1: Error: Source file requires different compiler version (current compiler is 0.4.25+commit.59dbf8f1.Linux.g++ - note that nightly builds are considered to be strictly less than the released version
+pragma solidity 0.4.24;
+^---------------------^
+
