@@ -1,0 +1,56 @@
+{
+  abi: '/home/realworldcontracts/0x951D51bAeFb72319d9FBE941E1615938d89ABfe2/0x951D51bAeFb72319d9FBE941E1615938d89ABfe2.abi',
+  tx: '/home/realworldcontracts/0x951D51bAeFb72319d9FBE941E1615938d89ABfe2/txs.json',
+  output: '/home/realworldcontracts/0x951D51bAeFb72319d9FBE941E1615938d89ABfe2/tx_decode.json'
+}
+type object 'Web3' has no attribute 'soliditySha3'
+None
+{'astId': 6, 'contract': 'oToken', 'label': 'OptionsContract_own_vaultOwners', 'offset': 0, 'slot': '6', 'type': 'address[]'}
+<class 'invcon.daikon.Contract.address[]'>
+Traceback (most recent call last):
+  File "/app/invcon/daikon/Contract.py", line 199, in Type_init
+    self.firstElementSlot = toInt(Web3.soliditySha3(["uint256"], [self.slot]))
+AttributeError: type object 'Web3' has no attribute 'soliditySha3'
+Traceback (most recent call last):
+  File "/app/invcon/daikon/Contract.py", line 199, in Type_init
+    self.firstElementSlot = toInt(Web3.soliditySha3(["uint256"], [self.slot]))
+AttributeError: type object 'Web3' has no attribute 'soliditySha3'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/invcon/daikon/Contract.py", line 1083, in __init__
+    grid_storages[slot][offset] = ClassMapping[type_identifier](astId, contract, label, offset, slot, type_identifier)
+  File "/app/invcon/daikon/Contract.py", line 247, in Type_init
+    raise Exception("Unknown error")
+Exception: Unknown error
+Traceback (most recent call last):
+  File "/app/invcon/daikon/Contract.py", line 199, in Type_init
+    self.firstElementSlot = toInt(Web3.soliditySha3(["uint256"], [self.slot]))
+AttributeError: type object 'Web3' has no attribute 'soliditySha3'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/invcon/daikon/Contract.py", line 1083, in __init__
+    grid_storages[slot][offset] = ClassMapping[type_identifier](astId, contract, label, offset, slot, type_identifier)
+  File "/app/invcon/daikon/Contract.py", line 247, in Type_init
+    raise Exception("Unknown error")
+Exception: Unknown error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/bin/invcon", line 33, in <module>
+    sys.exit(load_entry_point('InvCon', 'console_scripts', 'invcon')())
+  File "/app/invcon/__main__.py", line 41, in main
+    execute_command(args)
+  File "/app/invcon/__main__.py", line 21, in execute_command
+    daikon_main(address = args.eth_address,  workdir=args.workspace,  contractName = results["name"], storageLayoutJson = results["storageLayout_file"],  input_abi = results["abi_file"],  input_state_change = results["allstatechanges_file"] ,  input_tx_receipt = results["tx_decode_file"])
+  File "/app/invcon/daikon/main.py", line 12, in main
+    contract =Contract.Contract(workdir, contractName, storageLayoutJson, input_abi,  input_state_change, input_tx_receipt)
+  File "/app/invcon/daikon/Contract.py", line 1265, in __init__
+    super().__init__(typeJson=types, storageJson = storage)
+  File "/app/invcon/daikon/Contract.py", line 1094, in __init__
+    raise Exception("Unknown Error")     
+Exception: Unknown Error
