@@ -1,0 +1,152 @@
+Internal message calls (except fallback function): 0
+Traceback (most recent call last):
+  File "/app/invcon/crawler/crawler.py", line 96, in getExternalTxHasInternalTransactions
+    records = divs[1].find_all("tbody")[0].find_all("tr")
+IndexError: list index out of range
+{
+  abi: '/home/realworldcontracts/0xA1cE40702E15d0417a6c74D0bAB96772F36F4E99/0xA1cE40702E15d0417a6c74D0bAB96772F36F4E99.abi',
+  tx: '/home/realworldcontracts/0xA1cE40702E15d0417a6c74D0bAB96772F36F4E99/txs.json',
+  output: '/home/realworldcontracts/0xA1cE40702E15d0417a6c74D0bAB96772F36F4E99/tx_decode.json'
+}
+crawl contract state changes along transactions...
+[?25l
+|                                        | ▁▃▅ 0/12 [0%] in 0s (~0s, 0.0/s) 
+|                                        | ▂▄▆ 0/12 [0%] in 0s (~0s, 0.0/s) 
+|                                        | ▃▅▇ 0/12 [0%] in 0s (~0s, 0.0/s) 
+|                                        | ▄▆█ 0/12 [0%] in 0s (~0s, 0.0/s) 
+|                                        | ▅▇▇ 0/12 [0%] in 0s (~0s, 0.0/s) 
+|                                        | ▆█▆ 0/12 [0%] in 1s (~0s, 0.0/s) 
+|███▍                                    | ▇▇▅ 1/12 [8%] in 1s (~7s, 1.6/s) 
+|███▍                                    | █▆▄ 1/12 [8%] in 1s (~7s, 1.5/s) 
+|███▍                                    | ▇▅▃ 1/12 [8%] in 1s (~7s, 1.4/s) 
+|███▍                                    | ▆▄▂ 1/12 [8%] in 1s (~8s, 1.2/s) 
+|██████▋                                 | ▅▃▁ 2/12 [17%] in 1s (~8s, 1.3/s) 
+|██████▋                                 | ▄▂▂ 2/12 [17%] in 1s (~8s, 1.3/s) 
+|██████▋                                 | ▃▁▃ 2/12 [17%] in 2s (~8s, 1.3/s) 
+|██████████                              | ▂▂▄ 3/12 [25%] in 2s (~7s, 1.4/s) 
+|██████████                              | ▁▃▅ 3/12 [25%] in 2s (~7s, 1.4/s) 
+|██████████                              | ▂▄▆ 3/12 [25%] in 2s (~7s, 1.4/s) 
+|█████████████▍                          | ▃▅▇ 4/12 [33%] in 2s (~6s, 1.5/s) 
+|█████████████▍                          | ▄▆█ 4/12 [33%] in 3s (~6s, 1.5/s) 
+|█████████████▍                          | ▅▇▇ 4/12 [33%] in 3s (~6s, 1.5/s) 
+|█████████████▍                          | ▆█▆ 4/12 [33%] in 3s (~6s, 1.5/s) 
+|█████████████▍                          | ▇▇▅ 4/12 [33%] in 3s (~6s, 1.4/s) 
+|█████████████▍                          | █▆▄ 4/12 [33%] in 3s (~6s, 1.4/s) 
+|█████████████▍                          | ▇▅▃ 4/12 [33%] in 3s (~6s, 1.3/s) 
+|█████████████▍                          | ▆▄▂ 4/12 [33%] in 4s (~6s, 1.2/s) 
+|████████████████▋                       | ▅▃▁ 5/12 [42%] in 4s (~6s, 1.3/s) 
+|████████████████▋                       | ▄▂▂ 5/12 [42%] in 4s (~6s, 1.3/s) 
+|████████████████▋                       | ▃▁▃ 5/12 [42%] in 4s (~6s, 1.2/s) 
+|████████████████▋                       | ▂▂▄ 5/12 [42%] in 4s (~6s, 1.2/s) 
+|████████████████▋                       | ▁▃▅ 5/12 [42%] in 5s (~6s, 1.2/s) 
+|████████████████▋                       | ▂▄▆ 5/12 [42%] in 5s (~6s, 1.1/s) 
+|████████████████▋                       | ▃▅▇ 5/12 [42%] in 5s (~6s, 1.1/s) 
+|████████████████▋                       | ▄▆█ 5/12 [42%] in 5s (~6s, 1.1/s) 
+|████████████████████                    | ▅▇▇ 6/12 [50%] in 5s (~6s, 1.1/s) 
+|████████████████████                    | ▆█▆ 6/12 [50%] in 6s (~6s, 1.1/s) 
+|████████████████████                    | ▇▇▅ 6/12 [50%] in 6s (~6s, 1.1/s) 
+|███████████████████████▍                | █▆▄ 7/12 [58%] in 6s (~5s, 1.1/s) 
+|███████████████████████▍                | ▇▅▃ 7/12 [58%] in 6s (~5s, 1.1/s) 
+|███████████████████████▍                | ▆▄▂ 7/12 [58%] in 6s (~5s, 1.1/s) 
+|███████████████████████▍                | ▅▃▁ 7/12 [58%] in 7s (~5s, 1.1/s) 
+|███████████████████████▍                | ▄▂▂ 7/12 [58%] in 7s (~5s, 1.1/s) 
+|███████████████████████▍                | ▃▁▃ 7/12 [58%] in 7s (~5s, 1.1/s) 
+|███████████████████████▍                | ▂▂▄ 7/12 [58%] in 7s (~5s, 1.0/s) 
+|███████████████████████▍                | ▁▃▅ 7/12 [58%] in 7s (~5s, 1.0/s) 
+|██████████████████████████▋             | ▂▄▆ 8/12 [67%] in 8s (~4s, 1.0/s) 
+|██████████████████████████▋             | ▃▅▇ 8/12 [67%] in 8s (~4s, 1.0/s) 
+|██████████████████████████▋             | ▄▆█ 8/12 [67%] in 8s (~4s, 1.0/s) 
+|██████████████████████████████          | ▅▇▇ 9/12 [75%] in 8s (~3s, 1.0/s) 
+|██████████████████████████████          | ▆█▆ 9/12 [75%] in 8s (~3s, 1.1/s) 
+|██████████████████████████████          | ▇▇▅ 9/12 [75%] in 9s (~3s, 1.1/s) 
+|██████████████████████████████          | █▆▄ 9/12 [75%] in 9s (~3s, 1.0/s) 
+|█████████████████████████████████▍      | ▇▅▃ 10/12 [83%] in 9s (~2s, 1.1/s) 
+|█████████████████████████████████▍      | ▆▄▂ 10/12 [83%] in 9s (~2s, 1.1/s) 
+|█████████████████████████████████▍      | ▅▃▁ 10/12 [83%] in 9s (~2s, 1.1/s) 
+|█████████████████████████████████▍      | ▄▂▂ 10/12 [83%] in 10s (~2s, 1.1/s) 
+|█████████████████████████████████▍      | ▃▁▃ 10/12 [83%] in 10s (~2s, 1.1/s) 
+|█████████████████████████████████▍      | ▂▂▄ 10/12 [83%] in 10s (~2s, 1.0/s) 
+|█████████████████████████████████▍      | ▁▃▅ 10/12 [83%] in 10s (~2s, 1.0/s) 
+|█████████████████████████████████▍      | ▂▄▆ 10/12 [83%] in 10s (~2s, 1.0/s) 
+|█████████████████████████████████▍      | ▃▅▇ 10/12 [83%] in 11s (~2s, 1.0/s) 
+|████████████████████████████████████▋   | ▄▆█ 11/12 [92%] in 11s (~1s, 1.0/s) 
+|████████████████████████████████████▋   | ▅▇▇ 11/12 [92%] in 11s (~1s, 1.0/s) 
+|████████████████████████████████████▋   | ▆█▆ 11/12 [92%] in 11s (~1s, 1.0/s) 
+|████████████████████████████████████▋   | ▇▇▅ 11/12 [92%] in 11s (~1s, 1.0/s) 
+|████████████████████████████████████▋   | █▆▄ 11/12 [92%] in 12s (~1s, 1.0/s) 
+|████████████████████████████████████▋   | ▇▅▃ 11/12 [92%] in 12s (~1s, 1.0/s) 
+|████████████████████████████████████▋   | ▆▄▂ 11/12 [92%] in 12s (~1s, 0.9/s) 
+|████████████████████████████████████▋   | ▅▃▁ 11/12 [92%] in 12s (~1s, 0.9/s) 
+|████████████████████████████████████▋   | ▄▂▂ 11/12 [92%] in 12s (~1s, 0.9/s) 
+|████████████████████████████████████▋   | ▃▁▃ 11/12 [92%] in 13s (~1s, 0.9/s) 
+|████████████████████████████████████▋   | ▂▂▄ 11/12 [92%] in 13s (~1s, 0.9/s) 
+|████████████████████████████████████▋   | ▁▃▅ 11/12 [92%] in 13s (~1s, 0.9/s) 
+|████████████████████████████████████▋   | ▂▄▆ 11/12 [92%] in 13s (~1s, 0.9/s) 
+|████████████████████████████████████▋   | ▃▅▇ 11/12 [92%] in 14s (~1s, 0.8/s) 
+|████████████████████████████████████▋   | ▄▆█ 11/12 [92%] in 14s (~1s, 0.8/s) 
+|████████████████████████████████████▋   | ▅▇▇ 11/12 [92%] in 14s (~1s, 0.8/s) 
+|████████████████████████████████████▋   | ▆█▆ 11/12 [92%] in 14s (~1s, 0.8/s) 
+|████████████████████████████████████▋   | ▇▇▅ 11/12 [92%] in 14s (~1s, 0.8/s) 
+|████████████████████████████████████▋   | █▆▄ 11/12 [92%] in 15s (~1s, 0.8/s) 
+|████████████████████████████████████▋   | ▇▅▃ 11/12 [92%] in 15s (~1s, 0.8/s) 
+|████████████████████████████████████▋   | ▆▄▂ 11/12 [92%] in 15s (~1s, 0.8/s) 
+|████████████████████████████████████▋   | ▅▃▁ 11/12 [92%] in 15s (~1s, 0.7/s) 
+|████████████████████████████████████▋   | ▄▂▂ 11/12 [92%] in 16s (~1s, 0.7/s) 
+|████████████████████████████████████▋   | ▃▁▃ 11/12 [92%] in 16s (~1s, 0.7/s) 
+|████████████████████████████████████▋   | ▂▂▄ 11/12 [92%] in 16s (~1s, 0.7/s) 
+|████████████████████████████████████▋   | ▁▃▅ 11/12 [92%] in 16s (~1s, 0.7/s) 
+|████████████████████████████████████▋   | ▂▄▆ 11/12 [92%] in 17s (~1s, 0.7/s) 
+|████████████████████████████████████▋   | ▃▅▇ 11/12 [92%] in 17s (~1s, 0.7/s) [?25h[J
+|████████████████████████████████████████| 12/12 [100%] in 17.0s (0.69/s) [K
+Installing solc '0.8.16'...
+Version '0.8.16' installed.
+Switched global version to 0.8.16
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/crytic_compile/platform/solc.py", line 581, in _run_solc
+    ret: Dict = json.loads(stdout)
+  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/slither/slither.py", line 97, in __init__
+    crytic_compile = CryticCompile(target, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/crytic_compile/crytic_compile.py", line 211, in __init__
+    self._compile(**kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/crytic_compile/crytic_compile.py", line 633, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/crytic_compile/platform/solc.py", line 150, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/crytic_compile/platform/solc.py", line 279, in _get_targets_json
+    return _run_solc(
+  File "/usr/local/lib/python3.10/dist-packages/crytic_compile/platform/solc.py", line 585, in _run_solc
+    raise InvalidCompilation(f"Invalid solc compilation {stderr}")
+crytic_compile.platform.exceptions.InvalidCompilation: Invalid solc compilation Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /home/realworldcontracts/0xA1cE40702E15d0417a6c74D0bAB96772F36F4E99/0xA1cE40702E15d0417a6c74D0bAB96772F36F4E99.sol:1:1:
+  |
+1 | {{
+  | ^
+
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/invcon/crawler/crawler.py", line 470, in crawl
+    generateStorageLayout(sol_file= results["sourcecode_file"], contractName=results["name"], compilerVersion=results["compiler_version"], outStorageFile=results["storageLayout_file"])
+  File "/app/invcon/parsing/storageLayout.py", line 195, in main_impl
+    ss = Slither(sol_file)
+  File "/usr/local/lib/python3.10/dist-packages/slither/slither.py", line 101, in __init__
+    raise SlitherError(f"Invalid compilation: \n{str(e)}")
+slither.exceptions.SlitherError: Invalid compilation: 
+Invalid solc compilation Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /home/realworldcontracts/0xA1cE40702E15d0417a6c74D0bAB96772F36F4E99/0xA1cE40702E15d0417a6c74D0bAB96772F36F4E99.sol:1:1:
+  |
+1 | {{
+  | ^
