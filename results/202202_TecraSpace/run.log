@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/app/invcon/crawler/crawler.py", line 441, in crawl
+    exit(-1)
+  File "/usr/lib/python3.10/_sitebuiltins.py", line 26, in __call__
+    raise SystemExit(code)
+SystemExit: -1
