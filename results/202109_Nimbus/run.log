@@ -1,0 +1,18 @@
+{
+  abi: '/home/realworldcontracts/0xc0A6B8c534FaD86dF8FA1AbB17084A70F86EDDc1/0xc0A6B8c534FaD86dF8FA1AbB17084A70F86EDDc1.abi',
+  tx: '/home/realworldcontracts/0xc0A6B8c534FaD86dF8FA1AbB17084A70F86EDDc1/txs.json',
+  output: '/home/realworldcontracts/0xc0A6B8c534FaD86dF8FA1AbB17084A70F86EDDc1/tx_decode.json'
+}
+Installing solc '0.8.0'...
+Version '0.8.0' installed.
+Switched global version to 0.8.0
+Traceback (most recent call last):
+  File "/app/invcon/crawler/crawler.py", line 470, in crawl
+    generateStorageLayout(sol_file= results["sourcecode_file"], contractName=results["name"], compilerVersion=results["compiler_version"], outStorageFile=results["storageLayout_file"])
+  File "/app/invcon/parsing/storageLayout.py", line 198, in main_impl
+    compute_storage_layout(compilation_unit)
+  File "/app/invcon/parsing/storageLayout.py", line 185, in compute_storage_layout
+    compute_type_info(var.type, self._type_info, contract)
+  File "/app/invcon/parsing/storageLayout.py", line 150, in compute_type_info
+    assert False, type_ + " is currently not supported"
+AssertionError: uint112 is currently not supported
