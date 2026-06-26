@@ -1,0 +1,799 @@
+{
+  abi: '/home/realworldcontracts/0xB84CBAF116eb90fD445Dd5AeAdfab3e807D2CBaC/0xB84CBAF116eb90fD445Dd5AeAdfab3e807D2CBaC.abi',
+  tx: '/home/realworldcontracts/0xB84CBAF116eb90fD445Dd5AeAdfab3e807D2CBaC/txs.json',
+  output: '/home/realworldcontracts/0xB84CBAF116eb90fD445Dd5AeAdfab3e807D2CBaC/tx_decode.json'
+}
+[?25l
+|                                        | ▁▃▅ 2/2000 [0%] in 0s (~3s, 595.6/s) [2K
+[Jon 2: tx: 0x85f4ad3aea06458abe749139c136a783303eb32ce1397b7b339d6f7ee20c3af7 decoded function: {'function': 'setNotRevealedURI', 'args': {'0': 'https://wof.mypinata.cloud/ipfs/qmcqtwfy91yzmzzhqxvpbsqol6edd3saocwvgra63geund', '__length__': 1, '_notRevealedURI': 'https://wof.mypinata.cloud/ipfs/qmcqtwfy91yzmzzhqxvpbsqol6edd3saocwvgra63geund'}}
+[2K
+[Jon 2: Traceback (most recent call last):
+        File "/app/invcon/daikon/Contract.py", line 1345, in readTransactionFunctionInputVariables
+          1""".format(var, "\"{0}\"".format(args[var]) if isString(var_type) else str(int(args[var])) if not isBool(var_type) else 1 if args[var] else 0)
+      ValueError: invalid literal for int() with base 10: 'https://wof.mypinata.cloud/ipfs/qmcqtwfy91yzmzzhqxvpbsqol6edd3saocwvgra63geund'
+
+|▏                                       | ▂▄▆ 8/2000 [0%] in 0s (~3s, 623.3/s) on 67: Traceback (most recent call last):
+         File "/app/invcon/daikon/Contract.py", line 1315, in readTransactionFunctionInputVariables
+           functionABI = list(filter(lambda function: function["type"] == "function"  and function["name"]==decoded["function"], self.tx_abi))[0]
+       IndexError: list index out of range
+[2K
+[Jon 67: tx: 0x7e24f8787fe5193afb29c8667786b0720fe240230b8da675b9968a701dea67c5 decoded function: {'function': '0x00', 'args': '0x'}
+[2K
+[J
+|█▌                                      | ▃▅▇ 72/2000 [4%] in 0s (~3s, 676.7/s)
+|██▍                                     | ▄▆█ 118/2000 [6%] in 0s (~3s, 706.8/s
+|███▍                                    | ▅▇▇ 171/2000 [9%] in 0s (~3s, 735.0/s
+|████▎                                   | ▆█▆ 211/2000 [11%] in 0s (~3s, 764.5/
+|█████▋                                  | ▇▇▅ 280/2000 [14%] in 0s (~2s, 785.3/
+|██████▎                                 | █▆▄ 310/2000 [16%] in 0s (~2s, 797.8/
+|██████▉                                 | ▇▅▃ 342/2000 [17%] in 0s (~2s, 788.2/
+|███████▏                                | ▆▄▂ 359/2000 [18%] in 0s (~2s, 768.6/
+|████████                                | ▅▃▁ 399/2000 [20%] in 1s (~2s, 754.9/
+|█████████▍                              | ▄▂▂ 471/2000 [24%] in 1s (~2s, 751.1/
+|███████████                             | ▃▁▃ 549/2000 [27%] in 1s (~2s, 753.8/on 560: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+[2K
+[Jon 560: tx: 0x909d89bedefb5f4e8d4cceb6d969c45f0d37b4a9e0173aa1fdbfe6b6536bbb71 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x16f80489f048eef9573089ccbeb17d72790bfa15', '2': '83', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x16f80489f048eef9573089ccbeb17d72790bfa15', 'tokenId': '83', '_data': '0x30783030'}}
+[2K
+[J
+|███████████▍                            | ▂▂▄ 566/2000 [28%] in 1s (~2s, 756.5/[2K
+[Jon 566: tx: 0xd0a97a5932fd3079035941bf5de08210f223170dcd54ff85d47a6f0265016453 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x9d8a9227ceed5550e362cf6fd27725203fb31fb4', '2': '93', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x9d8a9227ceed5550e362cf6fd27725203fb31fb4', 'tokenId': '93', '_data': '0x30783030'}}
+[2K
+[Jon 566: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+
+|███████████▍                            | ▁▃▅ 571/2000 [29%] in 1s (~2s, 758.1/[2K
+[Jon 571: tx: 0x5b22242d9b0523c05a7f130f6b70e3c1d53b2bdbf94541ee586147f0f94c42dd decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x92cc17c86ebf30cb1d80c6c7ba497f002e623647', '2': '92', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x92cc17c86ebf30cb1d80c6c7ba497f002e623647', 'tokenId': '92', '_data': '0x30783030'}}
+[2K
+[Jon 571: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+[2K
+[Jon 574: tx: 0xd0455510c6c66b88663f6f24e543a41127b007302d25720e1732c8a5c3253654 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x92cc17c86ebf30cb1d80c6c7ba497f002e623647', '2': '91', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x92cc17c86ebf30cb1d80c6c7ba497f002e623647', 'tokenId': '91', '_data': '0x30783030'}}
+
+|███████████▌                            | ▂▄▆ 574/2000 [29%] in 1s (~2s, 758.5/[2K
+[Jon 574: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+[2K
+[Jon 576: tx: 0x8ff3f3ce091f64c50fd17cb4facc57f7b78914b498ad440d1c7d8d0b716ce729 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x92cc17c86ebf30cb1d80c6c7ba497f002e623647', '2': '90', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x92cc17c86ebf30cb1d80c6c7ba497f002e623647', 'tokenId': '90', '_data': '0x30783030'}}
+[2K
+[Jon 576: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+on 578: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+[2K
+[Jon 578: tx: 0x24e43e1b6c66b94fcdc2c2e6630eb91a267fac35da7823d4949400fc707ee09c decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x1e2a9930148360f21f8de84fb49852850b25c415', '2': '89', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x1e2a9930148360f21f8de84fb49852850b25c415', 'tokenId': '89', '_data': '0x30783030'}}
+[2K
+[J
+|███████████▋                            | ▃▅▇ 579/2000 [29%] in 1s (~2s, 758.6/[2K
+[Jon 579: tx: 0x854cd529033f01c65b66eb98ecfd8918608afe0f71a245de26141f4cae7affa1 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x47aa1e118ed7b363c3feb85f526bce182d667787', '2': '88', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x47aa1e118ed7b363c3feb85f526bce182d667787', 'tokenId': '88', '_data': '0x30783030'}}
+[2K
+[Jon 579: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+
+|███████████▋                            | ▄▆█ 583/2000 [29%] in 1s (~2s, 758.4/[2K
+[Jon 599: tx: 0x646bf46bf16e39fbaf339dcec804a10a343d7a17317ebb5aba77cb3cb1b52aeb decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0xdb8e967555f6a7832a7ff629d05f837ff7c8857e', '2': '87', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0xdb8e967555f6a7832a7ff629d05f837ff7c8857e', 'tokenId': '87', '_data': '0x30783030'}}
+[2K
+[Jon 599: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+
+|████████████                            | ▅▇▇ 601/2000 [30%] in 1s (~2s, 758.8/[2K
+[Jon 601: tx: 0x77cd3424746de546906a5f6165ca6f492bf13b65cd5e7a8a0d64844ac8d3d7ec decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x77af477a18f94b6dfd7761d44801b218d68a0e20', '2': '86', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x77af477a18f94b6dfd7761d44801b218d68a0e20', 'tokenId': '86', '_data': '0x30783030'}}
+on 601: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+[2K
+[J
+|████████████                            | ▆█▆ 602/2000 [30%] in 1s (~2s, 758.7/[2K
+[Jon 602: tx: 0x84d3e11750905e1e71e16d07b4a26e4e8177d2db2934e4d16e4dd46431b629e1 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0xa7cb84450a493d2af54145c08699a5e79993eee2', '2': '85', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0xa7cb84450a493d2af54145c08699a5e79993eee2', 'tokenId': '85', '_data': '0x30783030'}}
+[2K
+[Jon 602: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+
+|████████████▏                           | ▇▇▅ 606/2000 [30%] in 1s (~2s, 758.5/[2K
+[Jon 611: tx: 0xd28437817c999be73477a19a108684eb501e3cdb30d40488ffa8be1e9830e274 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x3b1ca829e6c1c26900e86cd89891924406f5dbc5', '2': '84', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x3b1ca829e6c1c26900e86cd89891924406f5dbc5', 'tokenId': '84', '_data': '0x30783030'}}
+on 611: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+[2K
+[J
+|████████████▎                           | █▆▄ 612/2000 [31%] in 1s (~2s, 757.9/on 612: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+[2K
+[Jon 612: tx: 0x949bd50bc18e9910c8e6e07606fe9fe58dfb12fd89766a2b6abeb0c8c63b1ed8 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x3b1ca829e6c1c26900e86cd89891924406f5dbc5', '2': '82', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x3b1ca829e6c1c26900e86cd89891924406f5dbc5', 'tokenId': '82', '_data': '0x30783030'}}
+[2K
+[Jon 613: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+[2K
+[Jon 613: tx: 0xf9a2907b2a9713460c67a29c0f34aff0d58c7b9c57899bcdfb4344500b0d6ed9 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x3b1ca829e6c1c26900e86cd89891924406f5dbc5', '2': '81', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x3b1ca829e6c1c26900e86cd89891924406f5dbc5', 'tokenId': '81', '_data': '0x30783030'}}
+[2K
+[J[2K
+[Jon 614: tx: 0x7dbe4fa2b8b32ef35940995eef898be1ecf64327631bc4e2ff1a7feeb27ee017 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x3b1ca829e6c1c26900e86cd89891924406f5dbc5', '2': '74', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x3b1ca829e6c1c26900e86cd89891924406f5dbc5', 'tokenId': '74', '_data': '0x30783030'}}
+
+|████████████▎                           | ▇▅▃ 614/2000 [31%] in 1s (~2s, 757.0/[2K
+[Jon 614: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+[2K
+[Jon 615: tx: 0x4c87f036c1e890065bb878860fdd7916fdd9e3ef53b0cf94fc227dd220c3d0a9 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x8bfc1d2f77622921e710b76d33c78303af47875c', '2': '66', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x8bfc1d2f77622921e710b76d33c78303af47875c', 'tokenId': '66', '_data': '0x30783030'}}
+
+|████████████▎                           | ▆▄▂ 615/2000 [31%] in 1s (~2s, 756.0/[2K
+[Jon 615: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+[2K
+[Jon 616: tx: 0x58f8222182cc764b7503cd22ce65a561805c9f757170a14eacadf9205c8284bc decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x8bfc1d2f77622921e710b76d33c78303af47875c', '2': '65', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x8bfc1d2f77622921e710b76d33c78303af47875c', 'tokenId': '65', '_data': '0x30783030'}}
+
+|████████████▍                           | ▅▃▁ 616/2000 [31%] in 1s (~2s, 755.0/[2K
+[Jon 616: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+[2K
+[Jon 617: tx: 0xd985f025c4a0f13c341a55dbe9bbc193aed6733fd85348b41f2a525b6e4ca586 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x33686541f23e1d137374da93af3055ad6f52c642', '2': '64', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x33686541f23e1d137374da93af3055ad6f52c642', 'tokenId': '64', '_data': '0x30783030'}}
+[2K
+[Jon 617: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+
+|████████████▍                           | ▄▂▂ 618/2000 [31%] in 1s (~2s, 754.1/[2K
+[Jon 618: tx: 0x3288ec579e091686a74da565e3b0d848fc9dc1e500bc685eef080890e1203c95 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x3537aa88348e1c75033a2fd60fb60dc25862da50', '2': '63', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x3537aa88348e1c75033a2fd60fb60dc25862da50', 'tokenId': '63', '_data': '0x30783030'}}
+[2K
+[Jon 618: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+[2K
+[Jon 619: tx: 0x279c9aa1c568a9b13c8007c8170cb7cd44d2b8c48b3e6828ad50ac18d066ab0a decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x0cc45b6b465835188d164dbee635bf0076d4512e', '2': '62', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x0cc45b6b465835188d164dbee635bf0076d4512e', 'tokenId': '62', '_data': '0x30783030'}}
+
+|████████████▍                           | ▃▁▃ 619/2000 [31%] in 1s (~2s, 753.1/[2K
+[Jon 619: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+[2K
+[Jon 620: tx: 0x91ee519ed7701b260c189811069fe52b2d12bbefe1e8af80158d9cbd480c16b3 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0xf81d3a15ca9237490b1c2ddd0f085b93a26ed15f', '2': '61', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0xf81d3a15ca9237490b1c2ddd0f085b93a26ed15f', 'tokenId': '61', '_data': '0x30783030'}}
+[2K
+[Jon 620: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+[2K
+[Jon 621: tx: 0x6cb21737725c9a0b0d8a24eef709e056c24868a069b043802111b5a8d989f2b7 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0xf7e5b63b348fb839354ffd58f83f5774d1966e25', '2': '60', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0xf7e5b63b348fb839354ffd58f83f5774d1966e25', 'tokenId': '60', '_data': '0x30783030'}}
+[2K
+[Jon 621: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+[2K
+[Jon 622: tx: 0x81c56a4f3740011c9a2723b97fc20c3a63582ad0c951b45f6b20b9f144310c59 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x513490509783c94c14cced0e69224d1bd042fdc4', '2': '59', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x513490509783c94c14cced0e69224d1bd042fdc4', 'tokenId': '59', '_data': '0x30783030'}}
+
+|████████████▌                           | ▂▂▄ 622/2000 [31%] in 1s (~2s, 751.9/[2K
+[Jon 622: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+[2K
+[Jon 623: tx: 0xc64afe18e3de817ae8414d5675fe24c079852deebff15fc0efabe40030c5e117 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x7705ccfc1e1aaf09d24070f17e6eb64629e0f361', '2': '58', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x7705ccfc1e1aaf09d24070f17e6eb64629e0f361', 'tokenId': '58', '_data': '0x30783030'}}
+
+|████████████▌                           | ▁▃▅ 623/2000 [31%] in 1s (~2s, 750.7/on 623: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+[2K
+[J[2K
+[Jon 624: tx: 0xc95edab52af361b3b2130b0918d6aa6f626518f1ae1fe20ae9aa50a69f9cf97b decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0xc1ebd309c66a4a9c637ee17acee4d0f47363ccf4', '2': '57', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0xc1ebd309c66a4a9c637ee17acee4d0f47363ccf4', 'tokenId': '57', '_data': '0x30783030'}}
+
+|████████████▌                           | ▂▄▆ 624/2000 [31%] in 1s (~2s, 749.5/[2K
+[Jon 624: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+[2K
+[Jon 626: tx: 0x280a302dc0f75a9611f79f050662ed599f2ca960874f81168c8de4b329d49437 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0xd0c9cff9561097d13570ceae8ffe8e56fcf9ee57', '2': '56', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0xd0c9cff9561097d13570ceae8ffe8e56fcf9ee57', 'tokenId': '56', '_data': '0x30783030'}}
+[2K
+[Jon 626: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+[2K
+[Jon 628: tx: 0xa5c95076bbc1919872d8c8c90b158f8e26824bd6eeb64a0946ca76e2bcc8c626 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x9921dd8014126c06fd5c2501e4f4dd7c6e5cc1e5', '2': '55', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x9921dd8014126c06fd5c2501e4f4dd7c6e5cc1e5', 'tokenId': '55', '_data': '0x30783030'}}
+
+|████████████▌                           | ▃▅▇ 628/2000 [31%] in 1s (~2s, 748.4/[2K
+[Jon 628: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+[2K
+[Jon 629: tx: 0x9d8e7181795ebda9fb13e10d6dbeac4205bb9ff2716d10388b292c55f36ef375 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x7d6e33aa0734047a56e786adf18460a0907e3827', '2': '54', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x7d6e33aa0734047a56e786adf18460a0907e3827', 'tokenId': '54', '_data': '0x30783030'}}
+
+|████████████▋                           | ▄▆█ 629/2000 [31%] in 1s (~2s, 747.5/[2K
+[Jon 629: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+[2K
+[Jon 630: tx: 0x19b3626a7497b14bb145c505d25df892f920f8bff56033d10d3d4251e82015af decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x390f3328904a3dba306b0a01acbc7c0193fef9b0', '2': '53', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x390f3328904a3dba306b0a01acbc7c0193fef9b0', 'tokenId': '53', '_data': '0x30783030'}}
+
+|████████████▋                           | ▅▇▇ 630/2000 [32%] in 1s (~2s, 746.4/[2K
+[Jon 630: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+on 631: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+[2K
+[Jon 631: tx: 0x2e8c05c5a7d917d9cdc381c0259084d2caf2dab8947ab16bbbdd2c1ef934f40a decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x179267b4616e7b93290ff7cca57e248b74a7fd13', '2': '52', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x179267b4616e7b93290ff7cca57e248b74a7fd13', 'tokenId': '52', '_data': '0x30783030'}}
+[2K
+[J[2K
+[Jon 633: tx: 0x3c79caa5b36b9b5c0f5986101535aa14eb6d680c1bb307504dee3a2f2ad4a0be decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0xd516ea149b8b7a9d1ff0e9aea32deebbde8c8244', '2': '51', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0xd516ea149b8b7a9d1ff0e9aea32deebbde8c8244', 'tokenId': '51', '_data': '0x30783030'}}
+
+|████████████▋                           | ▆█▆ 633/2000 [32%] in 1s (~2s, 745.0/[2K
+[Jon 633: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+[2K
+[Jon 634: tx: 0x3a7e2661ce5060f6d34d4d09a9ed20e974a3552c3017755881f6202ba039e80e decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x6f46ab284fee8780bd60316e1249ce544efcdb3d', '2': '50', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x6f46ab284fee8780bd60316e1249ce544efcdb3d', 'tokenId': '50', '_data': '0x30783030'}}
+
+|████████████▋                           | ▇▇▅ 634/2000 [32%] in 1s (~2s, 743.6/[2K
+[Jon 634: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+[2K
+[Jon 636: tx: 0x33700cc2b8cddedcea0f968552599577e188c980a650f3fa1d8fce73cb1e9fa3 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x90d375e9120c2752cc5754d8ed64fab6990312e5', '2': '49', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x90d375e9120c2752cc5754d8ed64fab6990312e5', 'tokenId': '49', '_data': '0x30783030'}}
+
+|████████████▊                           | █▆▄ 636/2000 [32%] in 1s (~2s, 742.4/[2K
+[Jon 636: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+[2K
+[Jon 637: tx: 0x5e55e301c06e69bec37d098219d41e487538ac516c15618de746504d3135c1f2 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x0b17d83ad5a5e36655ba5bfbd18da1b073d14d05', '2': '48', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x0b17d83ad5a5e36655ba5bfbd18da1b073d14d05', 'tokenId': '48', '_data': '0x30783030'}}
+on 637: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+
+|████████████▊                           | ▇▅▃ 637/2000 [32%] in 1s (~2s, 741.3/[2K
+[J[2K
+[Jon 638: tx: 0xb5928b8574b2f866b7f7f986d1cb0cb1508ac6e65e1141569704acdd91bdc148 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x2eac7b9628abc7b917e8dfc26bf65e25ea6b2734', '2': '47', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x2eac7b9628abc7b917e8dfc26bf65e25ea6b2734', 'tokenId': '47', '_data': '0x30783030'}}
+
+|████████████▊                           | ▆▄▂ 638/2000 [32%] in 1s (~2s, 740.1/[2K
+[Jon 638: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+[2K
+[Jon 641: tx: 0xf6aa4fd5df68abbff5ba3c3e0649ba9c2d4aa2a4564fc1f79420014f1af4d44c decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x30645702ad40aed852801a2c403b9c8a3066e03a', '2': '46', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x30645702ad40aed852801a2c403b9c8a3066e03a', 'tokenId': '46', '_data': '0x30783030'}}
+[2K
+[Jon 641: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+[2K
+[Jon 642: tx: 0x4c99887ceaa7410d4a1a575a9f1698fa4c90f9abb31d6b8361429d539993f455 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0xedafcdc53f90f9ed1e68da23f1d546ffb4b7b04b', '2': '45', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0xedafcdc53f90f9ed1e68da23f1d546ffb4b7b04b', 'tokenId': '45', '_data': '0x30783030'}}
+[2K
+[Jon 642: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+[2K
+[Jon 643: tx: 0x14512b62c2d8934d9b5aaff417fb6624612c867fca028e763bc98b64200320ba decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0xf23bd4323a8c23b74e0a2137a109c8b42529702b', '2': '44', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0xf23bd4323a8c23b74e0a2137a109c8b42529702b', 'tokenId': '44', '_data': '0x30783030'}}
+[2K
+[Jon 643: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+[2K
+[Jon 645: tx: 0x3437286ffdd087bd5b5eff5ead44fb22946551bedb031c48a3c82df653b2b872 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x1934af4b65c8fb398a300f3f76696325de49103c', '2': '43', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x1934af4b65c8fb398a300f3f76696325de49103c', 'tokenId': '43', '_data': '0x30783030'}}
+
+|████████████▉                           | ▅▃▁ 645/2000 [32%] in 1s (~2s, 739.0/[2K
+[Jon 645: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+[2K
+[Jon 648: tx: 0x7d19c95b656d8fcccf3e1cfab730ec87f509b2a1fb0aafd5d68470f4f76ba6c7 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x9b2b533bc29e7555df042c58415495812d95048b', '2': '42', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x9b2b533bc29e7555df042c58415495812d95048b', 'tokenId': '42', '_data': '0x30783030'}}
+
+|█████████████                           | ▄▂▂ 648/2000 [32%] in 1s (~2s, 738.1/[2K
+[Jon 648: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+[2K
+[Jon 650: tx: 0x6b03e5424f4fae569827236c9a4312cff3632a019b7e77d0720d68fc07d3bad7 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x2ee388b9da79da4f9bac850539f72515e0a8e25e', '2': '41', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x2ee388b9da79da4f9bac850539f72515e0a8e25e', 'tokenId': '41', '_data': '0x30783030'}}
+[2K
+[Jon 650: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+
+|█████████████▏                          | ▃▁▃ 655/2000 [33%] in 1s (~2s, 737.4/[2K
+[Jon 658: tx: 0xe15e757c60318ae17827732911e31d78fefb73fcf3bfd3b31783b791570c5db2 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0xeda042d2df67516fc3f5985f5b095826a3f647ca', '2': '40', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0xeda042d2df67516fc3f5985f5b095826a3f647ca', 'tokenId': '40', '_data': '0x30783030'}}
+[2K
+[Jon 658: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+[2K
+[Jon 661: tx: 0xb30f5d8ac27a3bf3cce380af857be6d6e82be4ade6f26658e4342514181ed6d8 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x6f66585b67a05c584ec7b0c9d0130d32fd1f1e2b', '2': '39', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x6f66585b67a05c584ec7b0c9d0130d32fd1f1e2b', 'tokenId': '39', '_data': '0x30783030'}}
+[2K
+[Jon 661: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+
+|█████████████▍                          | ▂▂▄ 667/2000 [33%] in 1s (~2s, 736.8/[2K
+[Jon 669: tx: 0xc77de0437ba5c2108c487984df94b02f8d54ac4410b5f34f40c39b3ea5ff0240 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x1f3f5165f0aeaee95368bd29a701d085012ed952', '2': '38', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x1f3f5165f0aeaee95368bd29a701d085012ed952', 'tokenId': '38', '_data': '0x30783030'}}
+[2K
+[Jon 669: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+
+|█████████████▌                          | ▁▃▅ 673/2000 [34%] in 1s (~2s, 736.0/[2K
+[Jon 674: tx: 0xcdb728f49edfdf3bbb8093694e3240fbd9f9198052deee34fd3905b30cda2726 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x297ea7fa152614c6e65e0c177a8f8c5a52ba2f14', '2': '37', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x297ea7fa152614c6e65e0c177a8f8c5a52ba2f14', 'tokenId': '37', '_data': '0x30783030'}}
+[2K
+[Jon 674: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+
+|█████████████▌                          | ▂▄▆ 675/2000 [34%] in 1s (~2s, 735.2/[2K
+[Jon 675: tx: 0x1c92c8e31753e0e3e4ca97ea66140e2f87d8dfd727741aebbd731eced8fe6ffe decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x209a2708ce1f3c263cd09496aa9148c496f9557a', '2': '36', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x209a2708ce1f3c263cd09496aa9148c496f9557a', 'tokenId': '36', '_data': '0x30783030'}}
+[2K
+[Jon 675: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+
+|█████████████▌                          | ▃▅▇ 678/2000 [34%] in 1s (~2s, 734.6/on 678: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+[2K
+[Jon 678: tx: 0xdb4a76c3629ba44e457b4e1b666c199406b3f61e0287459a1ce496af7d3cc966 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0xaa9b1896651ee8d3f67d69073cf77a2bea3cc7f4', '2': '35', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0xaa9b1896651ee8d3f67d69073cf77a2bea3cc7f4', 'tokenId': '35', '_data': '0x30783030'}}
+[2K
+[J[2K
+[Jon 679: tx: 0x0204ec0ae860194c5f951d7d1e68a2ef19ca237c25e36588c0c7809abc66ab42 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x9cb4938391b02da0b199c05f513f42b76f689cf1', '2': '34', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x9cb4938391b02da0b199c05f513f42b76f689cf1', 'tokenId': '34', '_data': '0x30783030'}}
+
+|█████████████▋                          | ▄▆█ 679/2000 [34%] in 1s (~2s, 733.7/[2K
+[Jon 679: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+[2K
+[Jon 680: tx: 0x73ec309909c3b30cbdabb41b85544a2dc5049b9b3ff7873b0e5b2d16a6943fee decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x6a810b40d762bbf51b0861b42cf89b049fd59776', '2': '33', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x6a810b40d762bbf51b0861b42cf89b049fd59776', 'tokenId': '33', '_data': '0x30783030'}}
+
+|█████████████▋                          | ▅▇▇ 680/2000 [34%] in 1s (~2s, 732.7/[2K
+[Jon 680: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+
+|█████████████▊                          | ▆█▆ 685/2000 [34%] in 1s (~2s, 732.3/[2K
+[Jon 686: tx: 0x9c0ea22a9f5b7ef4ece2817622e8fa1e93fdcf3147a292dd911c2bf265c4ccb6 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0xfcef84bf80adbbc0246ee52d2989d6bd2332930d', '2': '32', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0xfcef84bf80adbbc0246ee52d2989d6bd2332930d', 'tokenId': '32', '_data': '0x30783030'}}
+[2K
+[Jon 686: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+
+|█████████████▊                          | ▇▇▅ 687/2000 [34%] in 1s (~2s, 731.7/[2K
+[Jon 687: tx: 0x703c49f8177fb7c088b0095e7824f206dd6f528a1c9a0afdef15cc122ddf54f4 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x7461c9f02b32158febdd7200e3324ae45860f125', '2': '31', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x7461c9f02b32158febdd7200e3324ae45860f125', 'tokenId': '31', '_data': '0x30783030'}}
+[2K
+[Jon 687: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+
+|█████████████▊                          | █▆▄ 688/2000 [34%] in 1s (~2s, 731.1/[2K
+[Jon 688: tx: 0x67f7216c4bf46e166a8728c3bd415067374ae6809001922a92fd9c585f777c69 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x9d9ded7c58aea0f46effa02325efceb68d948194', '2': '30', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x9d9ded7c58aea0f46effa02325efceb68d948194', 'tokenId': '30', '_data': '0x30783030'}}
+on 688: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+[2K
+[J[2K
+[Jon 689: tx: 0x2ca3a98747c5cb5a51888a5c40ff7ff530736cbcffff32d852f9f9a019f3fe63 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x8cb50ec0c202e294afe6efc4bec0535cad578c93', '2': '29', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x8cb50ec0c202e294afe6efc4bec0535cad578c93', 'tokenId': '29', '_data': '0x30783030'}}
+
+|█████████████▊                          | ▇▅▃ 689/2000 [34%] in 1s (~2s, 730.2/[2K
+[Jon 689: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+[2K
+[Jon 690: tx: 0xe27b0b499ea4b2c7e1be4d02ba0b1c2f38d828df49a7076648352c76dc852f42 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0xb13193a3080ea8a8e8d5817ade259c9b5f98503b', '2': '28', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0xb13193a3080ea8a8e8d5817ade259c9b5f98503b', 'tokenId': '28', '_data': '0x30783030'}}
+
+|█████████████▊                          | ▆▄▂ 690/2000 [34%] in 1s (~2s, 729.3/[2K
+[Jon 690: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+[2K
+[Jon 693: tx: 0xd0c3caaf4e203ad98a64b5b3087e471c95a4d3ead197c24180cf049a665bfa06 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x4785b7131e42970d97b37054b991482e04dd9e07', '2': '27', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x4785b7131e42970d97b37054b991482e04dd9e07', 'tokenId': '27', '_data': '0x30783030'}}
+
+|█████████████▉                          | ▅▃▁ 693/2000 [35%] in 1s (~2s, 728.7/[2K
+[Jon 693: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+[2K
+[Jon 696: tx: 0xaaa4d23095b61ff52838b03b44ed51561db5b23b063d86e779be2ce509d99279 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x078ad2aa3b4527e4996d087906b2a3da51bba122', '2': '26', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x078ad2aa3b4527e4996d087906b2a3da51bba122', 'tokenId': '26', '_data': '0x30783030'}}
+
+|█████████████▉                          | ▄▂▂ 696/2000 [35%] in 1s (~2s, 728.3/[2K
+[Jon 696: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+[2K
+[Jon 697: tx: 0xfac277ac7378d8c365670a6f4ab62603ad6fb72f07abd76f6cbe2d6f5092258c decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0xd57070457e8f3d3a4fe6a3425db8247ae6540b3d', '2': '25', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0xd57070457e8f3d3a4fe6a3425db8247ae6540b3d', 'tokenId': '25', '_data': '0x30783030'}}
+[2K
+[Jon 697: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+[2K
+[Jon 698: tx: 0xb47ecb148f9e0ae976a7944750b76009123859dfe0da8ac07fa74ba7d8753d01 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x09c624d5271a1f7e6a2588e778a4d48bb90a6952', '2': '24', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x09c624d5271a1f7e6a2588e778a4d48bb90a6952', 'tokenId': '24', '_data': '0x30783030'}}
+
+|██████████████                          | ▃▁▃ 698/2000 [35%] in 1s (~2s, 727.6/[2K
+[Jon 698: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+[2K
+[Jon 699: tx: 0xf02c5b7066eaee420fedfe113918e192513f90e7d494a2e99f276d5322d5d5c0 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0xc396a9dee10a8de0428bef3e6661a6bc3583249e', '2': '23', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0xc396a9dee10a8de0428bef3e6661a6bc3583249e', 'tokenId': '23', '_data': '0x30783030'}}
+
+|██████████████                          | ▂▂▄ 699/2000 [35%] in 1s (~2s, 726.6/[2K
+[Jon 699: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+
+|██████████████▏                         | ▁▃▅ 705/2000 [35%] in 1s (~2s, 726.5/on 707: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+[2K
+[Jon 707: tx: 0x4b42aaafcb96efefab72ce1e03b5f7e2277b5fc1c14e6a838a5b096256c8c6af decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0xd5163727eae6868abc9f079609ae27d6c4cce30b', '2': '22', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0xd5163727eae6868abc9f079609ae27d6c4cce30b', 'tokenId': '22', '_data': '0x30783030'}}
+[2K
+[Jon 708: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+[2K
+[Jon 708: tx: 0x66a4e9c04ee9e63cfad16a7a028fb4f5c1e2fd16e1839455aa395719fad4b7ef decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x61481241bfb332757f02af23fdc4655b555bf9b2', '2': '21', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x61481241bfb332757f02af23fdc4655b555bf9b2', 'tokenId': '21', '_data': '0x30783030'}}
+[2K
+[J
+|██████████████▎                         | ▂▄▆ 710/2000 [36%] in 1s (~2s, 725.8/[2K
+[Jon 710: tx: 0x10750b0748519675533b59d597cd4f0af5264814aa7d53e9b61e793c29773865 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x1e8311304343827927f796a836997e993e0d5e92', '2': '20', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x1e8311304343827927f796a836997e993e0d5e92', 'tokenId': '20', '_data': '0x30783030'}}
+[2K
+[Jon 710: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+[2K
+[Jon 711: tx: 0x0dc74c2f53b0a90a169cd352ee2c7a49654fb938affcba13eb2d7d333d274159 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x2ea667abd8e323278ab35d8aa64aaedaccac5530', '2': '19', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x2ea667abd8e323278ab35d8aa64aaedaccac5530', 'tokenId': '19', '_data': '0x30783030'}}
+
+|██████████████▎                         | ▃▅▇ 711/2000 [36%] in 1s (~2s, 724.9/[2K
+[Jon 711: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+[2K
+[Jon 712: tx: 0x0d165df51ef857306afb106483a2fba4a084e3101cd1a423fd0f93b9594f321b decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x54a5804fca4f47f3cf57fafc3795c965509a7775', '2': '18', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x54a5804fca4f47f3cf57fafc3795c965509a7775', 'tokenId': '18', '_data': '0x30783030'}}
+[2K
+[Jon 712: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+
+|██████████████▎                         | ▄▆█ 713/2000 [36%] in 1s (~2s, 724.1/[2K
+[Jon 713: tx: 0xec4d5f4fd1dcb5d0ccc276e28e6a2bda7d124fcb3051b20ef72073048ff5ebb6 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x67c651ee2ea2b94a1abd8a38e35d8af24e0286ed', '2': '17', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x67c651ee2ea2b94a1abd8a38e35d8af24e0286ed', 'tokenId': '17', '_data': '0x30783030'}}
+[2K
+[Jon 713: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+[2K
+[Jon 714: tx: 0xe5f436e6fe1e6d604b812341211251fb3e393222a7f84d51c0a146f577cab77a decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0xd7b23511d0c67435bd769aff871e2f83f214176c', '2': '16', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0xd7b23511d0c67435bd769aff871e2f83f214176c', 'tokenId': '16', '_data': '0x30783030'}}
+
+|██████████████▎                         | ▅▇▇ 714/2000 [36%] in 1s (~2s, 723.2/[2K
+[Jon 714: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+
+|██████████████▎                         | ▆█▆ 715/2000 [36%] in 1s (~2s, 722.5/[2K
+[Jon 715: tx: 0x44c80e7c151c0b99695e8c4e5b2a88dba4cb4c5618d4e566a8da4a658a95e07d decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0xbfd5a6496102be1c8bb8532e56ae9cc0fbaf8b0b', '2': '15', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0xbfd5a6496102be1c8bb8532e56ae9cc0fbaf8b0b', 'tokenId': '15', '_data': '0x30783030'}}
+[2K
+[Jon 715: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+
+|██████████████▍                         | ▇▇▅ 716/2000 [36%] in 1s (~2s, 721.7/[2K
+[Jon 716: tx: 0x2dbf3013deff29199e87a5ac256822c754585a75573d018add34a068d87c6050 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0xb13e4d274da4cc6e21e90ca24029a86c2deeadb6', '2': '14', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0xb13e4d274da4cc6e21e90ca24029a86c2deeadb6', 'tokenId': '14', '_data': '0x30783030'}}
+[2K
+[Jon 716: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+
+|██████████████▍                         | █▆▄ 717/2000 [36%] in 1s (~2s, 720.8/[2K
+[Jon 717: tx: 0xbe2893387c4cb3d0165f2f187c0a73e6c448605b61fc20c8bcae52f078950262 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0xf7749fa28334f5d17d9f6ec52bfadfd680510ecb', '2': '13', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0xf7749fa28334f5d17d9f6ec52bfadfd680510ecb', 'tokenId': '13', '_data': '0x30783030'}}
+[2K
+[Jon 717: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+[2K
+[Jon 718: tx: 0xa5dd2532abb266eb08dbba9defe82c347d1bb9548ec33273b719d31c14b078b7 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0xcbab0428b9ed7fdc13390c89d153bb5f621a49f9', '2': '12', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0xcbab0428b9ed7fdc13390c89d153bb5f621a49f9', 'tokenId': '12', '_data': '0x30783030'}}
+
+|██████████████▍                         | ▇▅▃ 718/2000 [36%] in 1s (~2s, 719.7/on 718: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+[2K
+[J[2K
+[Jon 719: tx: 0xc73ab08c093ab8c2abdaf52b09074bb4ba8d62af8e4260522ec9ac165ebcbaab decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x1380776b1cd8d03508137534ca8b8ba1e8819f81', '2': '11', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x1380776b1cd8d03508137534ca8b8ba1e8819f81', 'tokenId': '11', '_data': '0x30783030'}}
+[2K
+[Jon 719: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+
+|██████████████▍                         | ▆▄▂ 720/2000 [36%] in 1s (~2s, 718.7/[2K
+[Jon 720: tx: 0xe963a620612a6aa682b3e0f5db40f896983bfeea3acb0b6f78db914e221a4f5e decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0xecd822b2354cf008d286973ef1c39cc7a3ca9b14', '2': '10', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0xecd822b2354cf008d286973ef1c39cc7a3ca9b14', 'tokenId': '10', '_data': '0x30783030'}}
+[2K
+[Jon 720: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+
+|██████████████▍                         | ▅▃▁ 721/2000 [36%] in 1s (~2s, 717.7/[2K
+[Jon 721: tx: 0x04ddd58d6a682d4018416fb99b0a09ac099c0532fe91aeb48400ffc1984e4bf6 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0xb4ccdfa84eceaea5e6cebe0807b018638618f55d', '2': '9', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0xb4ccdfa84eceaea5e6cebe0807b018638618f55d', 'tokenId': '9', '_data': '0x30783030'}}
+[2K
+[Jon 721: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+
+|██████████████▌                         | ▄▂▂ 722/2000 [36%] in 1s (~2s, 716.9/[2K
+[Jon 722: tx: 0x45cdedc335aa0f9c72cbff844acafc6013abba691f8063ac209561e1f8bd0cf5 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x72ef529140def06a215249028d825112cc042edc', '2': '8', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x72ef529140def06a215249028d825112cc042edc', 'tokenId': '8', '_data': '0x30783030'}}
+[2K
+[Jon 722: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+
+|██████████████▌                         | ▃▁▃ 723/2000 [36%] in 1s (~2s, 716.1/[2K
+[Jon 723: tx: 0x28755cb0b831d340d26f9ca4729f74c02f54c50227e3e7cb448e5bb6bed16b0b decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0xfc4553b97d71f19a43f48c65e6da4581d20b3a6b', '2': '7', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0xfc4553b97d71f19a43f48c65e6da4581d20b3a6b', 'tokenId': '7', '_data': '0x30783030'}}
+[2K
+[Jon 723: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+
+|██████████████▌                         | ▂▂▄ 724/2000 [36%] in 1s (~2s, 715.4/[2K
+[Jon 724: tx: 0xc010fd6eece9fc6a3eeb229c793a540ea3f71170e38f03caca00e784b87500c8 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x42cbd461badfa828d64bb2684f49289a62248d4a', '2': '6', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x42cbd461badfa828d64bb2684f49289a62248d4a', 'tokenId': '6', '_data': '0x30783030'}}
+on 724: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+[2K
+[J[2K
+[Jon 725: tx: 0xfc7544ac51b7c05c10facb2c21662f31767fbe6dc8c1977559e9c5ee4711e457 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x34e93e725ae49a6152eb51cbfebb671e1d56ce6b', '2': '5', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x34e93e725ae49a6152eb51cbfebb671e1d56ce6b', 'tokenId': '5', '_data': '0x30783030'}}
+
+|██████████████▌                         | ▁▃▅ 725/2000 [36%] in 1s (~2s, 714.6/[2K
+[Jon 725: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+[2K
+[Jon 726: tx: 0xaabdada0373205894caabad4e8ae2203aa2135972639e8fde089f01c91f7ee11 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x71ab28ec0cbb9c30f6b8ec897c9bc62142a6d5c6', '2': '4', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x71ab28ec0cbb9c30f6b8ec897c9bc62142a6d5c6', 'tokenId': '4', '_data': '0x30783030'}}
+on 726: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+
+|██████████████▌                         | ▂▄▆ 726/2000 [36%] in 1s (~2s, 713.8/[2K
+[J[2K
+[Jon 727: tx: 0x55fe583f8a6b6e0eb4e59c826a8db559745193ddacc40bc732df90a907b64871 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x6c79c0afbfcc1203afb2dd7d44920887dba1c460', '2': '3', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x6c79c0afbfcc1203afb2dd7d44920887dba1c460', 'tokenId': '3', '_data': '0x30783030'}}
+
+|██████████████▌                         | ▃▅▇ 727/2000 [36%] in 1s (~2s, 713.2/[2K
+[Jon 727: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+
+|██████████████▌                         | ▄▆█ 728/2000 [36%] in 1s (~2s, 712.5/[2K
+[Jon 728: tx: 0x7d4cc92ef18b8a8f7f20d6a41866d878a1a1bf39cc075cd26c0c54f02725ac43 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0xdeebe2eaf34aada1052cbc1d7e0c8ef880e41007', '2': '0', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0xdeebe2eaf34aada1052cbc1d7e0c8ef880e41007', 'tokenId': '0', '_data': '0x30783030'}}
+[2K
+[Jon 728: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+
+|██████████████▋                         | ▅▇▇ 733/2000 [37%] in 1s (~2s, 712.3/
+|████████████████▏                       | ▆█▆ 809/2000 [40%] in 1s (~2s, 716.7/on 855: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+[2K
+[Jon 855: tx: 0x76a09f41fb1ae734e3b06a36b58a7933580a1d396da840f652c6012919639bc7 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x84d5317c1b79dd848a2522afc35d0c71a3d9a16d', '2': '2', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x84d5317c1b79dd848a2522afc35d0c71a3d9a16d', 'tokenId': '2', '_data': '0x30783030'}}
+[2K
+[J
+|█████████████████▏                      | ▇▇▅ 856/2000 [43%] in 1s (~2s, 721.8/[2K
+[Jon 856: tx: 0x0f5d3de29fd8359ac2dfd5aeea8f6eb38946d25176714c5a4baa011034e2f3e8 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0xbf318e477523d7d7f7a91b56c625c24b0c5993b9', '2': '1', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0xbf318e477523d7d7f7a91b56c625c24b0c5993b9', 'tokenId': '1', '_data': '0x30783030'}}
+[2K
+[Jon 856: Traceback (most recent call last):
+          File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+            var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+        IndexError: list index out of range
+
+|█████████████████▎                      | █▆▄ 862/2000 [43%] in 1s (~2s, 725.8/
+|██████████████████▊                     | ▇▅▃ 939/2000 [47%] in 1s (~2s, 731.5/
+|████████████████████▎                   | ▆▄▂ 1015/2000 [51%] in 1s (~1s, 738.6
+|█████████████████████▋                  | ▅▃▁ 1083/2000 [54%] in 1s (~1s, 744.5
+|██████████████████████▉                 | ▄▂▂ 1141/2000 [57%] in 1s (~1s, 750.2
+|████████████████████████▎               | ▃▁▃ 1215/2000 [61%] in 2s (~1s, 756.1
+|█████████████████████████▌              | ▂▂▄ 1274/2000 [64%] in 2s (~1s, 760.8
+|███████████████████████████             | ▁▃▅ 1347/2000 [67%] in 2s (~1s, 765.7[2K
+[Jon 1375: tx: 0x8ee44a11a4ac9226f549201569a2f6c987dcf141d2f9a9aa56a1f8bdf4560ac5 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x32b11bc488086890554a10c6dd08f73109930570', '2': '849', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x32b11bc488086890554a10c6dd08f73109930570', 'tokenId': '849', '_data': '0x30783030'}}
+[2K
+[Jon 1375: Traceback (most recent call last):
+           File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+             var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+         IndexError: list index out of range
+
+|███████████████████████████▌            | ▂▄▆ 1376/2000 [69%] in 2s (~1s, 769.1[2K
+[Jon 1376: tx: 0xbca9fcb738d3d6111bfa0d6b770006e96a2d129170b3dedc8336489a82861f30 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0xa871a2bb52225c5a5162d160462d9513ce8e8e4d', '2': '853', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0xa871a2bb52225c5a5162d160462d9513ce8e8e4d', 'tokenId': '853', '_data': '0x30783030'}}
+[2K
+[Jon 1376: Traceback (most recent call last):
+           File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+             var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+         IndexError: list index out of range
+
+|███████████████████████████▌            | ▃▅▇ 1377/2000 [69%] in 2s (~1s, 771.0[2K
+[Jon 1377: tx: 0x23361edae193ef576762cfac4ac72196fb796b1497580af82a37838d8038584e decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0xb95a3bf65c10a7ee64af73b028c667240e4a9955', '2': '854', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0xb95a3bf65c10a7ee64af73b028c667240e4a9955', 'tokenId': '854', '_data': '0x30783030'}}
+[2K
+[Jon 1377: Traceback (most recent call last):
+           File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+             var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+         IndexError: list index out of range
+
+|███████████████████████████▌            | ▄▆█ 1378/2000 [69%] in 2s (~1s, 772.0[2K
+[Jon 1378: tx: 0xa7288898c939556085e190be018ab780af4a80804058bf7748dff331b21ec322 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0xfc736a0610dbdf0f1a6a895413450ca7e088d8ad', '2': '855', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0xfc736a0610dbdf0f1a6a895413450ca7e088d8ad', 'tokenId': '855', '_data': '0x30783030'}}
+on 1378: Traceback (most recent call last):
+           File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+             var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+         IndexError: list index out of range
+[2K
+[J
+|███████████████████████████▋            | ▅▇▇ 1379/2000 [69%] in 2s (~1s, 772.4[2K
+[Jon 1379: tx: 0x1d188dfb909b9ff20235b071e418661fc9e94ebd793e53ca3d858652a5df4fb0 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x12fe8ef62be23185fcf60f54165852212081990c', '2': '856', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x12fe8ef62be23185fcf60f54165852212081990c', 'tokenId': '856', '_data': '0x30783030'}}
+[2K
+[Jon 1379: Traceback (most recent call last):
+           File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+             var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+         IndexError: list index out of range
+
+|███████████████████████████▋            | ▆█▆ 1380/2000 [69%] in 2s (~1s, 772.6[2K
+[Jon 1380: tx: 0x6f96bf919e88ad34b8588c45b42b2493371238f9af463088524a76c1b2ede4cf decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0xf53dc613d712c0c3559590fe52140258e7bd301a', '2': '857', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0xf53dc613d712c0c3559590fe52140258e7bd301a', 'tokenId': '857', '_data': '0x30783030'}}
+[2K
+[Jon 1380: Traceback (most recent call last):
+           File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+             var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+         IndexError: list index out of range
+
+|███████████████████████████▋            | ▇▇▅ 1381/2000 [69%] in 2s (~1s, 772.6[2K
+[Jon 1381: tx: 0x1f9803ee4a03f238669d5c070177a516fd9979e45cbdda82af132f4b7ddeeb57 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x09eff2449882f9e727a8e9498787f8ff81465ade', '1': '0x56ecf8cba9f5735d6c67725c2466bacb1e7f58ff', '2': '858', '3': '0x30783030', '__length__': 4, 'from': '0x09eff2449882f9e727a8e9498787f8ff81465ade', 'to': '0x56ecf8cba9f5735d6c67725c2466bacb1e7f58ff', 'tokenId': '858', '_data': '0x30783030'}}
+[2K
+[Jon 1381: Traceback (most recent call last):
+           File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+             var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+         IndexError: list index out of range
+
+|███████████████████████████▋            | █▆▄ 1384/2000 [69%] in 2s (~1s, 772.4[2K
+[Jon 1384: tx: 0x3e1c739661737ab48fbb67cd2fa244a09abf480eda6a4b0ff548695cd1c60092 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0xcfd96dd3cf018bd10ff2319760e98de4750193a1', '1': '0x6fd227a05156ace0bc19fc678dbae77e96a4f58b', '2': '667', '3': '0x30783030', '__length__': 4, 'from': '0xcfd96dd3cf018bd10ff2319760e98de4750193a1', 'to': '0x6fd227a05156ace0bc19fc678dbae77e96a4f58b', 'tokenId': '667', '_data': '0x30783030'}}
+[2K
+[Jon 1384: Traceback (most recent call last):
+           File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+             var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+         IndexError: list index out of range
+
+|███████████████████████████▊            | ▇▅▃ 1388/2000 [69%] in 2s (~1s, 772.0
+|████████████████████████████▌           | ▆▄▂ 1424/2000 [71%] in 2s (~1s, 772.7
+|█████████████████████████████▎          | ▅▃▁ 1465/2000 [73%] in 2s (~1s, 774.8on 1505: Traceback (most recent call last):
+           File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+             var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+         IndexError: list index out of range
+[2K
+[Jon 1505: tx: 0xa545baeaac0ee4a0cf19ab39e09c64ec306ed6b0f00aa78741a719854dfa0bd1 decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x9e365ba6282fe3c712c956ca36846b54b5b87690', '1': '0x6fd227a05156ace0bc19fc678dbae77e96a4f58b', '2': '582', '3': '0x30783030', '__length__': 4, 'from': '0x9e365ba6282fe3c712c956ca36846b54b5b87690', 'to': '0x6fd227a05156ace0bc19fc678dbae77e96a4f58b', 'tokenId': '582', '_data': '0x30783030'}}
+[2K
+[J
+|██████████████████████████████▎         | ▄▂▂ 1510/2000 [76%] in 2s (~1s, 776.0
+|███████████████████████████████▏        | ▃▁▃ 1558/2000 [78%] in 2s (~1s, 777.6
+|███████████████████████████████▉        | ▂▂▄ 1595/2000 [80%] in 2s (~1s, 779.7[2K
+[Jon 1618: tx: 0xa5a4038d6cadd310269848bf4509ca3de786e577f1a77d3fce6bff16fd4641b3 decoded function: {'function': 'setBaseURI', 'args': {'0': 'https://gateway.pinata.cloud/ipfs/qmtmqzc8ccxfaxdyxe74jeynhkmv1jftlfwd475cpupj3j/', '__length__': 1, '_newBaseURI': 'https://gateway.pinata.cloud/ipfs/qmtmqzc8ccxfaxdyxe74jeynhkmv1jftlfwd475cpupj3j/'}}
+[2K
+[Jon 1618: Traceback (most recent call last):
+           File "/app/invcon/daikon/Contract.py", line 1345, in readTransactionFunctionInputVariables
+             1""".format(var, "\"{0}\"".format(args[var]) if isString(var_type) else str(int(args[var])) if not isBool(var_type) else 1 if args[var] else 0)
+         ValueError: invalid literal for int() with base 10: 'https://gateway.pinata.cloud/ipfs/qmtmqzc8ccxfaxdyxe74jeynhkmv1jftlfwd475cpupj3j/'
+
+|████████████████████████████████▌       | ▁▃▅ 1623/2000 [81%] in 2s (~1s, 781.4[2K
+[Jon 1632: tx: 0xc392483596ea4e54d4bd7e4bcf51f418b27ef49973838385736c89cfb6d75e19 decoded function: {'function': 'setBaseURI', 'args': {'0': 'https://gateway.pinata.cloud/ipfs/qmajvafqgvndjrwk1flxuf4hh9jvpibwrmppnsk3jir4s1/', '__length__': 1, '_newBaseURI': 'https://gateway.pinata.cloud/ipfs/qmajvafqgvndjrwk1flxuf4hh9jvpibwrmppnsk3jir4s1/'}}
+[2K
+[Jon 1632: Traceback (most recent call last):
+           File "/app/invcon/daikon/Contract.py", line 1345, in readTransactionFunctionInputVariables
+             1""".format(var, "\"{0}\"".format(args[var]) if isString(var_type) else str(int(args[var])) if not isBool(var_type) else 1 if args[var] else 0)
+         ValueError: invalid literal for int() with base 10: 'https://gateway.pinata.cloud/ipfs/qmajvafqgvndjrwk1flxuf4hh9jvpibwrmppnsk3jir4s1/'
+
+|████████████████████████████████▊       | ▂▄▆ 1636/2000 [82%] in 2s (~0s, 782.5
+|█████████████████████████████████▊      | ▃▅▇ 1688/2000 [84%] in 2s (~0s, 783.3
+|██████████████████████████████████▊     | ▄▆█ 1738/2000 [87%] in 2s (~0s, 783.0
+|███████████████████████████████████▉    | ▅▇▇ 1791/2000 [90%] in 2s (~0s, 782.4on 1858: Traceback (most recent call last):
+           File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+             var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+         IndexError: list index out of range
+[2K
+[Jon 1858: tx: 0x4ab79530bee6beca24e6e8c39f415dd35a61c3babff753cc7b206fd60da3145a decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x591023b8fe785ae3c3c23acce28f47a9ff8a551d', '1': '0xc84cfc616c2520f8e3b1f43a708bceab7ef9d1ca', '2': '234', '3': '0x30783030', '__length__': 4, 'from': '0x591023b8fe785ae3c3c23acce28f47a9ff8a551d', 'to': '0xc84cfc616c2520f8e3b1f43a708bceab7ef9d1ca', 'tokenId': '234', '_data': '0x30783030'}}
+[2K
+[J
+|█████████████████████████████████████▎  | ▆█▆ 1864/2000 [93%] in 2s (~0s, 783.4[2K
+[Jon 1888: tx: 0xf5750f76df7de624e939fb40ba00e61cd1bf8ca72961690a568148f6c424f72f decoded function: {'function': 'safeTransferFrom', 'args': {'0': '0x21c84a0e151b3de576d1c33f3fbcec982259b77d', '1': '0x6b70bfe8aafc67c7556543b0b1c8325378dcc35a', '2': '533', '3': '0x00000000000000000000000021c84a0e151b3de576d1c33f3fbcec982259b77d000000000000000000000000b84cbaf116eb90fd445dd5aeadfab3e807d2cbac000000000000000000000000000000000000000000000000000000000000021500000000000000000000000000000000000000000000000000000000000000c000000000000000000000000000000000000000000000000000000000634642ff0000000000000000000000000000000000000000000000000000000000000120000000000000000000000000000000000000000000000000000000000000002e516d64716a7253394345413370624148436b33557364767171434371344b57685158666a3476685a6b523258694e00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000413be59bfc8d98dec5047751bb163252530be372f93c7a3fd6e9a2bd7e3665d4942b9608b950b4f7ca348b7577eaf1a3ec2e691b72be82eb80c41522f657218e611b00000000000000000000000000000000000000000000000000000000000000', '__length__': 4, 'from': '0x21c84a0e151b3de576d1c33f3fbcec982259b77d', 'to': '0x6b70bfe8aafc67c7556543b0b1c8325378dcc35a', 'tokenId': '533', '_data': '0x00000000000000000000000021c84a0e151b3de576d1c33f3fbcec982259b77d000000000000000000000000b84cbaf116eb90fd445dd5aeadfab3e807d2cbac000000000000000000000000000000000000000000000000000000000000021500000000000000000000000000000000000000000000000000000000000000c000000000000000000000000000000000000000000000000000000000634642ff0000000000000000000000000000000000000000000000000000000000000120000000000000000000000000000000000000000000000000000000000000002e516d64716a7253394345413370624148436b33557364767171434371344b57685158666a3476685a6b523258694e00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000413be59bfc8d98dec5047751bb163252530be372f93c7a3fd6e9a2bd7e3665d4942b9608b950b4f7ca348b7577eaf1a3ec2e691b72be82eb80c41522f657218e611b00000000000000000000000000000000000000000000000000000000000000'}}
+[2K
+[Jon 1888: Traceback (most recent call last):
+           File "/app/invcon/daikon/Contract.py", line 1339, in readTransactionFunctionInputVariables
+             var_type = list(filter(lambda input: input["name"]==var, functionABI["inputs"]))[0]["type"]
+         IndexError: list index out of range
+
+|█████████████████████████████████████▉  | ▇▇▅ 1893/2000 [95%] in 2s (~0s, 784.5
+|███████████████████████████████████████▌| █▆▄ 1973/2000 [99%] in 2s [?25h(~0s, 786.6[J
+|████████████████████████████████████████⚠︎ (!) 1998/2000 [100%] in 2.6s (784.74/
+Traceback (most recent call last):
+  File "/usr/local/bin/invcon", line 33, in <module>
+    sys.exit(load_entry_point('InvCon', 'console_scripts', 'invcon')())
+  File "/app/invcon/__main__.py", line 41, in main
+    execute_command(args)
+  File "/app/invcon/__main__.py", line 21, in execute_command
+    daikon_main(address = args.eth_address,  workdir=args.workspace,  contractName = results["name"], storageLayoutJson = results["storageLayout_file"],  input_abi = results["abi_file"],  input_state_change = results["allstatechanges_file"] ,  input_tx_receipt = results["tx_decode_file"])
+  File "/app/invcon/daikon/main.py", line 24, in main
+    dtraces = contract.readAllTxs()
+  File "/app/invcon/daikon/Contract.py", line 1451, in readAllTxs
+    enter, exit1, exit2, dtraceParameters, args, funcName = self.readTransactionFunctionInputVariables(tx_hash, nounce)
+  File "/app/invcon/daikon/Contract.py", line 1306, in readTransactionFunctionInputVariables
+    assert False, f"Unsupported parameter type of {_var} of values {args[_var]}" 
+AssertionError: Unsupported parameter type of 3 of values None
