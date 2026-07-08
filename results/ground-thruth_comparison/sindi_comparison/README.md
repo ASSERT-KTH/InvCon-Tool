@@ -144,3 +144,31 @@ every relational output is actually parsable by Sindi. Expected result:
 ```
 
 ---
+
+## Results
+
+Comparison outcome for the evaluated contracts (14 comparable ground-truth predicates). Each verdict is the strongest one obtained by Sindi across all InvCon invariants for that `(contract, function)`.
+
+| Contract | Function | Ground-truth predicate | Number of InvCon Invariants | Verdict (Sindi) |
+|---|---|---|---|---|
+| 201804_BEC | batchTransfer | `_value <= uint256(-1) / cnt` | 63 | The predicates are not equivalent and neither is stronger. |
+| 201804_SmartMesh | transferProxy | `total >= _feeSmt` | 112 | The predicates are not equivalent and neither is stronger. |
+| 201804_SmartMesh | transferProxy | `total >= _value` | 112 |The predicates are not equivalent and neither is stronger. |
+| 202102_Yearn_ydai | earn | `msg.sender == governance` | 75 | The predicates are not equivalent and neither is stronger. |
+| 202210_N00d | enter | `!__lock_modifier0_lock` | 61 | The predicates are not equivalent and neither is stronger. |
+| 202210_Uerii | mint | `totalSupply() + amount <= CAP` | 33 | The predicates are not equivalent and neither is stronger. |
+| 202301_QTN | transfer | `msg.sender == address(uniswapV2Router)` | 296 | The predicates are not equivalent and neither is stronger. |
+| 202306_VINU | addLiquidityETH | `size == 0` | 23 | The predicates are not equivalent and neither is stronger. |
+| 202308_Uwerx | transfer | `uniswapPoolAddress!=address(0x1)` | 55 | The predicates are not equivalent and neither is stronger. |
+| 202308_Uwerx | transfer | `_balances[to]==(toBalance - userTransferAmount)` | 55 | The second predicate is stronger. |
+| 202311_grok | _transfer | `swapAmount <= taxAmount` | 633 | The predicates are not equivalent and neither is stronger. |
+| 202404_HoppyFrogERC | _transfer | `swapAmount <= maxSwapForSell` | 762 | The predicates are not equivalent and neither is stronger. |
+| 202406_APEMAGA | family | `msg.sender == account` | 83 | The predicates are not equivalent and neither is stronger. |
+| 202409_Bedrock_DeFi | mint | `uniBTCAmount * 1e10 < msg.value` | 42 | The predicates are not equivalent and neither is stronger. |
+
+### Verdict distribution
+
+| Verdict | Count |
+|---|---|
+| The predicates are not equivalent and neither is stronger. | 13 |
+| The second predicate (the ground-truth) is stronger. | 1 |
