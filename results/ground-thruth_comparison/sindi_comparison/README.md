@@ -49,9 +49,9 @@ predicate** (removing `require(`, `;`, error messages and comments) and splits
 ### Step 2 — Compare with Sindi
 
 ```bash
-python3 compare_invcon_sindi.py \
-    --daikon-dir ./daikon \
-    --ground-truth ./ground_truth.csv \
+python3 compare_invcon_sindi.py \\
+    --daikon-dir ./daikon \\
+    --ground-truth ./ground_truth.csv \\
     --out ./verdicts.csv
 ```
 
@@ -76,14 +76,26 @@ Contains one row per `(contract, function)` pair with Sindi's textual verdict.
 | `function` | Function the ground truth refers to |
 | `gt_predicate` | The ground-truth predicate extracted from the diff |
 | `n_invariant_lines` | Number of InvCon invariants examined for that comparison |
-| `verdict_raw` | Sindi's textual verdict (the best one obtained across all invariants) |
+| `verdict_raw` | Verdict (see below) |
 
-The possible values of `verdict_raw` are Sindi's four official strings:
+Possible values of `verdict_raw`:
+
+Sindi's four official strings (when a comparison actually took place):
 
 - `The predicates are equivalent.` — the InvCon invariant is equivalent to the ground truth
 - `The first predicate is stronger.` — the InvCon invariant is stronger
 - `The second predicate is stronger.` — the ground truth is stronger
 - `The predicates are not equivalent and neither is stronger.` — no relationship
+
+Plus two pipeline labels (when no Sindi comparison was possible):
+
+- `no invariant for the vulnerable function` — InvCon produced no invariant for
+  that function (`n_invariant_lines = 0`), so there is nothing to compare against
+  the ground truth.
+- `no comparable invariant (all non-relational)` — InvCon produced invariants,
+  but all of them are non-relational (meta-statements such as `has only one
+  value`, or array/aggregate syntax such as `sum(...)` / `[]`), none of which is
+  a boolean predicate Sindi can compare.
 
 ---
 
@@ -107,8 +119,9 @@ Categories in `category`:
 - `meta` — Daikon meta-statement (`has only one value`, `!= null`): not a
   boolean predicate
 - `object_id` — object identity (`this == orig(this)`)
-- `unmappable` — Daikon syntax recognized as non-translatable
-  (`one of {...}`, `size(...)`, `elements`, `getValueOfKey(...)`)
+- `unmappable` — Daikon syntax recognized as non-translatable: aggregates
+  (`sum(...)`) and array/accessor syntax (`[]`, `[].getValue()`,
+  `[].getSubLength()`), plus `one of {...}`, `size(...)`, `getValueOfKey(...)`
 - `unknown` / `error` — non-classifiable row / comparison error
 
 ---
@@ -119,14 +132,24 @@ InvCon's invariants are in a **Daikon dialect**. Most lines are already
 accepted by Sindi's tokenizer; only the array/accessor syntax breaks it.
 `daikon_preprocessor.py`:
 
-- **maps** `X[].getValue()` → `X_getValue`, `sum(...)` → an opaque symbol
-  `sum_...`, **without renaming the variables** (names stay *mangled*, for
-  fidelity to the original tool)
-- **filters out** meta-statements and object identity (not boolean predicates)
-- **flags** non-translatable syntax as `unmappable` instead of crashing the
-  comparison
+- **leaves relational predicates untouched** where possible — `orig(x)`, dotted
+  names, `== false`, numeric literals are all accepted by Sindi as-is (variable
+  names stay *mangled*, for fidelity to the original tool)
+- **filters out** meta-statements (`has only one value`, `!= null`) and object
+  identity (`this == orig(this)`) — not boolean predicates
+- **flags as `unmappable`** (skipped, not translated) any line containing an
+  aggregate `sum(...)` or array/accessor syntax (`[]`, `[].getValue()`, …). These
+  are **not** rewritten into opaque symbols: `X[]` and `X_`, or `sum(...)` and
+  `sum_...`, are not the same thing, so inventing a symbol would create a
+  spurious correspondence. Marking them `unmappable` keeps the distinction
+  between "non-comparable construct" and a real negative comparison, and matches
+  the InvCon+ pipeline's handling of the analogous `Sum(...)` syntax.
 
 `orig(x)` is **not** touched: Sindi already accepts it as a symbol.
+
+The shared ground-truth loader also normalises numeric literals that Sindi's
+tokenizer cannot handle: underscore digit separators (`10_000` → `10000`) and
+constant power expressions (`10000**2` → `100000000`).
 
 ### Preprocessor tests
 
@@ -147,17 +170,24 @@ every relational output is actually parsable by Sindi. Expected result:
 
 ## Results
 
-Comparison outcome for the evaluated contracts (14 comparable ground-truth predicates). Each verdict is the strongest one obtained by Sindi across all InvCon invariants for that `(contract, function)`.
+Comparison outcome for the evaluated contracts. Each verdict is the strongest
+one obtained by Sindi across all InvCon invariants for that
+`(contract, function)`, or a pipeline label when no comparison was possible.
 
 | Contract | Function | Ground-truth predicate | Number of InvCon Invariants | Verdict (Sindi) |
 |---|---|---|---|---|
 | 201804_BEC | batchTransfer | `_value <= uint256(-1) / cnt` | 63 | The predicates are not equivalent and neither is stronger. |
 | 201804_SmartMesh | transferProxy | `total >= _feeSmt` | 112 | The predicates are not equivalent and neither is stronger. |
-| 201804_SmartMesh | transferProxy | `total >= _value` | 112 |The predicates are not equivalent and neither is stronger. |
+| 201804_SmartMesh | transferProxy | `total >= _value` | 112 | The predicates are not equivalent and neither is stronger. |
 | 202102_Yearn_ydai | earn | `msg.sender == governance` | 75 | The predicates are not equivalent and neither is stronger. |
+| 202202_Anyswap | anySwapOutUnderlyingWithPermit | `v == 27 \|\| v == 28` | 45 | The predicates are not equivalent and neither is stronger. |
+| 202206_InverseFinance | latestAnswer | `crvLPTokenPrice >= lower` | 0 | no invariant for the vulnerable function |
+| 202206_InverseFinance | latestAnswer | `crvLPTokenPrice <= upper` | 0 | no invariant for the vulnerable function |
 | 202210_N00d | enter | `!__lock_modifier0_lock` | 61 | The predicates are not equivalent and neither is stronger. |
 | 202210_Uerii | mint | `totalSupply() + amount <= CAP` | 33 | The predicates are not equivalent and neither is stronger. |
+| 202212_JAY | buyJay | `!__lock_modifier0_lock` | 0 | no invariant for the vulnerable function |
 | 202301_QTN | transfer | `msg.sender == address(uniswapV2Router)` | 296 | The predicates are not equivalent and neither is stronger. |
+| 202305_ERC20TokenBank | doExchange | `namount >= (camount * 995) / 1000` | 0 | no invariant for the vulnerable function |
 | 202306_VINU | addLiquidityETH | `size == 0` | 23 | The predicates are not equivalent and neither is stronger. |
 | 202308_Uwerx | transfer | `uniswapPoolAddress!=address(0x1)` | 55 | The predicates are not equivalent and neither is stronger. |
 | 202308_Uwerx | transfer | `_balances[to]==(toBalance - userTransferAmount)` | 55 | The second predicate is stronger. |
@@ -166,9 +196,24 @@ Comparison outcome for the evaluated contracts (14 comparable ground-truth predi
 | 202406_APEMAGA | family | `msg.sender == account` | 83 | The predicates are not equivalent and neither is stronger. |
 | 202409_Bedrock_DeFi | mint | `uniBTCAmount * 1e10 < msg.value` | 42 | The predicates are not equivalent and neither is stronger. |
 
-### Verdict distribution
-
 | Verdict | Count |
 |---|---|
-| The predicates are not equivalent and neither is stronger. | 13 |
-| The second predicate (the ground-truth) is stronger. | 1 |
+| The predicates are not equivalent and neither is stronger. | 14 |
+| The second predicate is stronger. | 1 |
+| no invariant for the vulnerable function | 4 |
+
+### Reading the results
+
+- **14** predicates → `not equivalent / neither stronger`: InvCon produced
+  invariants for the vulnerable function, but none of them matches (or implies,
+  or is implied by) the patch's security guard.
+- **4** predicates → `no invariant for the vulnerable function`.
+- **1** predicate → `second predicate is stronger` (`202308_Uwerx`): the ground
+  truth is stronger than the InvCon invariant, i.e. InvCon inferred only a
+  weaker property than the one the patch enforces.
+
+Across the whole dataset, InvCon never produced an invariant equivalent to or
+stronger than a patch-derived security guard. Note that some contracts generate
+a very high number of invariants (e.g. `202404_HoppyFrogERC`: 762,
+`202311_grok`: 633), yet this volume does not translate into capturing the
+security-relevant property.
